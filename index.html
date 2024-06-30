@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="description" content="">
+<meta name="author" content="Xavi Jenkins">
+<meta charset="UTF-8">
+<meta name="keywords" content="Cooking, recipes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .w3-size-margin  {width: 87%; margin:3.5% 0% 3.5% 6.5%;}
+   @media screen and (min-width:600px) {
+  .w3-item-size  {width:80%; margin:3.5% 0% 3.5% 10%;}
+  @media screen and (min-width:760px) {
+  .w3-item-size  {width:40%; margin:3.5% 0% 3.5% 6.5%;}
+. {margin:3% 0% 3% 10%;} 
+ }
+  @media screen and (min-width:1200px) {
+  .w3-item-size  {width: 24.4%; margin:3.5% 0% 3.5% 6.5%;} 
+  . {margin:3% 0% 3% 10%}
+  }
+</style>
+<title>Xavi cooking website</title>
+<link rel="stylesheet" href="stylesheet1.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-bar-block w3-light-grey w3-card w3-animate-left" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large" onclick="closeSidebar()">Close &times;</button>
+        <a href="#" class="w3-bar-item w3-button">Recipes</a>
+        <button class="w3-bar-item w3-button w3-dropdown-click" onclick="toggleDropdown('demoDropdown')">Ingredients</button>
+        <div id="demoDropdown" class="w3-dropdown-content w3-bar-block w3-border" style="display:none;">
+            <a href="#" class="w3-bar-item w3-button">Vegetables</a>
+            <a href="#" class="w3-bar-item w3-button">Pasta</a>
+            <a href="#" class="w3-bar-item w3-button">Fruit</a>
+            <a href="#" class="w3-bar-item w3-button">Chicken</a>
+            <a href="#" class="w3-bar-item w3-button">Red Meat</a>
+            <a href="#" class="w3-bar-item w3-button">Fish and Seafood</a>
+            <a href="#" class="w3-bar-item w3-button">Pork</a>
+            <a href="#" class="w3-bar-item w3-button">Search by Ingredient</a>
+        </div>
+        <button class="w3-bar-item w3-button w3-dropdown-click" onclick="toggleDropdown('demoDropdown1')">Cuisines</button>
+        <div id="demoDropdown1" class="w3-dropdown-content w3-bar-block w3-border" style="display:none;">
+            <a href="#" class="w3-bar-item w3-button">Middle Eastern</a>
+            <a href="#" class="w3-bar-item w3-button">African</a>
+            <a href="#" class="w3-bar-item w3-button">European</a>
+            <a href="#" class="w3-bar-item w3-button">Caribbean</a>
+            <a href="#" class="w3-bar-item w3-button">Asian</a>
+            <a href="#" class="w3-bar-item w3-button">View All</a>
+        </div>
+        <a href="about us.html" class="w3-bar-item w3-button">About Us</a>
+    </div>
+    <!-- Open Sidebar Button -->
+    <div class="w3-container">
+        <button class="w3-button w3-xlarge" onclick="openSidebar()">&#9776;</button>
+    </div>
+
+    <div class="main-content">
+        <h1>Welcome to my Cooking Website</h1>
+    </div>
+
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.width = "200px";
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("mySidebar").style.display = "none";
+        }
+
+        function toggleDropdown(id) {
+            var x = document.getElementById(id);
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+
+        // Ensure the sidebar is closed initially
+        document.addEventListener("DOMContentLoaded", function() {
+            closeSidebar();
+        });
+    </script>
+<!-- This is the search bar -->
+<input class="search bar" style="text" placeholder="Dish,ingredient or key word">
+<!--This is the images of the recipes-->
+<div class="w3-row">
+<a href="Cottage pie.html">
+<div style="margin:3.5% 0% 3.5% 6.5%;" class=" w3-center w3-float-left w3-border w3-item-size w3-card-4">
+<figure style="margin:0;">
+<img style="width:100%; height: 80%; object-fit:cover;"class="w3-card-2 " src="cottage pie.jpg" alt="Cottage pie">
+<figcaption style="vertical-align:bottom; ;" class="w3-padding w3-bold">Cottage pie</figcaption>
+</figure>
+</div>
+</a>
+<a href="chichen shawarma.html">
+<div style="margin:3.5% 0% 3.5% 6.5%;" class="w3-center w3-float-left w3-border w3-item-size  w3-card-4">
+<figure style="margin:0;">
+<img style="width:100%; height: 80%; object-fit:cover;"class="w3-card-2 " src="cottage pie.jpg" alt="Chicken shawarma">
+<figcaption style="vertical-align:bottom; ;" class="w3-padding w3-bold">Chichen shawarma</figcaption>
+</figure>
+</div>
+</a>
+<a href="Chicken and mushroom risotto.html">
+<div style="margin:3.5% 0% 3.5% 6.5%;" class=" w3-center w3-float-left w3-border w3-item-size  w3-card-4">
+<figure style="margin:0;">
+<img style="width:100%; height: 80%; object-fit:cover;"class="w3-card-2 " src="cottage pie.jpg" alt="Chicken and muhroom risotto">
+<figcaption style="vertical-align:bottom; ;" class="w3-padding w3-bold">Chicken and mushroom risotto</figcaption>
+</figure>
+</div>
+</a>
+<a href="spaghetti bolognese.html">
+<div style="margin:3.5% 0% 3.5% 6.5%;" class=" w3-center w3-float-left w3-border w3-item-size  w3-card-4">
+<figure style="margin:0;">
+<img style="width:100%; height: 80%; object-fit:cover;"class="w3-card-2 " src="cottage pie.jpg" alt="Spaghetti bolognese">
+<figcaption style="vertical-align:bottom; ;" class="w3-padding w3-bold">Spaghetti bolognese</figcaption>
+</figure>
+</div>
+</a>
+<a href="Fish curry (Indian fish masala).html">
+<div style="margin:3.5% 0% 3.5% 6.5%;" class=" w3-center w3-float-left w3-border w3-item-size  w3-card-4">
+<figure style="margin:0;">
+<img style="width:100%; height: 80%; object-fit:cover;"class="w3-card-2 " src="cottage pie.jpg" alt="Fish curry (Indian fish masala)">
+<figcaption style="vertical-align:bottom; ;" class="w3-padding w3-bold">Fish curry (Indian fish masala)</figcaption>
+</figure>
+</div>
+</a>
+<a href="chili con carne.html">
+<div style="margin:3.5% 0% 3.5% 6.5%;" class=" w3-center w3-float-left w3-border w3-item-size  w3-card-4">
+<figure style="margin:0;">
+<img style="width:100%; height: 80%; object-fit:cover;"class="w3-card-2 " src="cottage pie.jpg" alt="Chili con carne">
+<figcaption style="vertical-align:bottom; ;" class="w3-padding w3-bold">Chili con carne</figcaption>
+</figure>
+</div>
+</a>
+<a href="Mushroom and tarragon frittata.html">
+<div style="margin:3.5% 0% 3.5% 6.5%;" class=" w3-center w3-float-left w3-border w3-item-size  w3-card-4">
+<figure style="margin:0;">
+<img style="width:100%; height: 80%; object-fit:cover;"class="w3-card-2 " src="cottage pie.jpg" alt="Mushroom and tarragon frittata">
+<figcaption style="vertical-align:bottom; ;" class="w3-padding w3-bold">Mushroom and tarragon frittata</figcaption>
+</figure>
+</div>
+</a>
+<a href="Steak and mushroom pie.html">
+<div style="margin:3.5% 0% 3.5% 6.5%;" class=" w3-center w3-float-left w3-border w3-item-size  w3-card-4">
+<figure style="margin:0;">
+<img style="width:100%; height: 80%; object-fit:cover;"class="w3-card-2 " src="cottage pie.jpg" alt="Steak and mushroom pie">
+<figcaption style="vertical-align:bottom; ;" class="w3-padding w3-bold">Steak and mushroom pie</figcaption>
+</figure>
+</div>
+</a>
+<a href="Salsa chicken and rice.html">
+<div style="margin:3.5% 0% 3.5% 6.5%;" class=" w3-center w3-float-left w3-border w3-item-size  w3-card-4">
+<figure style="margin:0;">
+<img style="width:100%; height: 80%; object-fit:cover;"class="w3-card-2 " src="cottage pie.jpg" alt="Salsa chicken and rice">
+<figcaption style="vertical-align:bottom; ;" class="w3-padding w3-bold">Salsa chicken and rice</figcaption>
+</figure>
+</div>
+</a>
+<a href="beef miso ramen.html">
+<div style="margin:3.5% 0% 3.5% 6.5%;" class=" w3-center w3-float-left w3-border w3-item-size  w3-card-4">
+<figure style="margin:0;">
+<img style="width:100%; height: 80%; object-fit:cover;"class="w3-card-2 " src="cottage pie.jpg" alt="Beef miso ramen">
+<figcaption style="vertical-align:bottom; ;" class="w3-padding w3-bold">Beef miso ramen</figcaption>
+</figure>
+</div>
+</a>
+<a href="Creamy chickpea curry.html">
+<div style="margin:3.5% 0% 3.5% 6.5%;" class=" w3-center w3-float-left w3-border w3-item-size  w3-card-4">
+<figure style="margin:0;">
+<img style="width:100%; height: 80%; object-fit:cover;"class="w3-card-2 " src="cottage pie.jpg" alt="Creamy chickpea curry">
+<figcaption style="vertical-align:bottom; ;" class="w3-padding w3-bold">Creamy chickpea curry</figcaption>
+</figure>
+</div>
+</a>
+
+</div>
+</body>
+</html>
