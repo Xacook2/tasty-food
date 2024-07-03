@@ -112,7 +112,7 @@
     
     <main class="container">
         <section class="recipe-details">
-            <img src="cottage-pie.jpg" alt="Cottage Pie" class="recipe-image">
+            <img src="recipe/cottage-pie.jpg" alt="Cottage Pie" class="recipe-image">
             <ul class="recipe-info">
                 <li class="time">Cook: 1hr 20mins</li>
                 <li class="time">Prep: 20mins</li>
