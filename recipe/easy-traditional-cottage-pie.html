@@ -69,9 +69,14 @@
             background-image: url('clock-icon.png'); 
         }
 
+        .nutritional-info li:before {
+            background-image: url('nutrition-icon.png'); 
+        }
+
         .ingredients,
         .instructions {
-            margin-bottom: 20px;}
+            margin-bottom: 20px;
+        }
 
         .ingredients ul,
         .instructions ol {
@@ -84,9 +89,19 @@
         }
 
         .nutritional-info {
+            text-align: center;
             margin-top: 20px;
-            padding: 10px;
-            border-radius: 5px;
+        }
+
+        .nutritional-info ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nutritional-info li {
+            display: inline-block;
+            margin: 0 10px;
         }
 
         .print-button {
@@ -120,6 +135,15 @@
                 <li class="serves">Serves: 6-8</li>
                 <li class="serves">by Xavi Jenkins</li>
             </ul>
+            <section class="nutritional-info">
+                <h2>Nutritional Information</h2>
+                <ul>
+                    <li>Calories: 450 kcal</li>
+                    <li>Protein: 30g</li>
+                    <li>Carbs: 40g</li>
+                    <li>Fat: 20g</li>
+                </ul>
+            </section>
         </section>
         
         <section class="ingredients w3-col l5 s12">
@@ -159,51 +183,9 @@
                 <li><input type="checkbox" id="step10"> <label for="step10">Bake in the preheated oven for 30 minutes or until the top is golden and the filling is bubbling.</label></li>
             </ol>
         </section>
-
-        <section class="nutritional-info">
-            <h2></h2>
-            <p></p>
-        </section>
         
         <div class="print-button">
             <button onclick="window.print()">Print Recipe</button>
         </div>
     </main>
     
-    <footer>
-        <p>&copy; 2024 Xavi Jenkins. All rights reserved.</p>
-    </footer>
-
-    <!-- JavaScript to handle checkbox functionality -->
-    <script>
-        // Get all checkboxes for ingredients and instructions
-        const ingredientCheckboxes = document.querySelectorAll('.ingredients input[type="checkbox"]');
-        const instructionCheckboxes = document.querySelectorAll('.instructions input[type="checkbox"]');
-
-        // Function to handle checkbox change
-        function handleCheckboxChange(checkbox, label) {
-            if (checkbox.checked) {
-                label.classList.add('crossed-out');
-            } else {
-                label.classList.remove('crossed-out');
-            }
-        }
-
-        // Add event listeners for ingredients checkboxes
-        ingredientCheckboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                const label = this.nextElementSibling;
-                handleCheckboxChange(this, label);
-            });
-        });
-
-        // Add event listeners for instructions checkboxes
-        instructionCheckboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                const label = this.nextElementSibling;
-                handleCheckboxChange(this, label);
-            });
-        });
-    </script>
-</body>
-</html>
