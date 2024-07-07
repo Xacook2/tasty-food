@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="description" content="">
+<meta name="description" content="Discover delicious recipes from around the world with Xavi Jenkins' cooking website. Explore cuisines, ingredients, and more.">
 <meta name="author" content="Xavi Jenkins">
 <meta charset="UTF-8">
 <meta name="keywords" content="Cooking, recipes">
@@ -10,34 +10,46 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="stylesheet1.css">
 <style>
-    /* Adjust main content when sidebar opens */
     body {
-        overflow-x: hidden; /* Prevent horizontal scrollbar */
+        overflow-x: hidden;
+        font-family: Arial, sans-serif;
     }
 
     #sidebar-container {
         position: fixed;
         top: 0;
-        left: -200px; /* Start off screen */
+        left: -200px;
         width: 200px;
         height: 100%;
         background-color: #f1f1f1;
-        transition: left 0.5s ease; /* Smooth transition */
+        transition: left 0.5s ease;
         z-index: 1;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.5);
     }
 
     #main-container {
         margin-left: 0;
-        transition: margin-left 0.5s ease; /* Smooth transition */
+        transition: margin-left 0.5s ease;
         padding: 20px;
     }
 
     #main-container.shift-right {
-        margin-left: 200px; /* Width of the sidebar */
+        margin-left: 200px;
     }
 
     a {
         text-decoration: none;
+        color: inherit;
+    }
+
+    .recipe-card img {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .recipe-card p {
+        margin: 10px 0;
+        font-size: 16px;
+        font-weight: bold;
     }
 </style>
 </head>
@@ -72,7 +84,7 @@
     </div>
 
     <!-- Main Content Container -->
-    <div id="main-container">
+    <div id="main-container" onclick="handleMainClick(event)">
         <div class="w3-container">
             <button class="w3-button w3-xlarge" onclick="openSidebar()">&#9776;</button>
         </div>
@@ -191,12 +203,12 @@
     <script>
         function openSidebar() {
             document.getElementById("sidebar-container").style.left = "0";
-            document.getElementById("main-container").style.marginLeft = "200px";
+            document.getElementById("main-container").classList.add('shift-right');
         }
 
         function closeSidebar() {
             document.getElementById("sidebar-container").style.left = "-200px";
-            document.getElementById("main-container").style.marginLeft = "0";
+            document.getElementById("main-container").classList.remove('shift-right');
         }
 
         function toggleDropdown(id) {
@@ -220,6 +232,15 @@
                 } else {
                     card.style.display = 'none';
                 }
+            }
+        }
+
+        function handleMainClick(event) {
+            let sidebar = document.getElementById("sidebar-container");
+            let mainContainer = document.getElementById("main-container");
+
+            if (sidebar.style.left === "0px" && !sidebar.contains(event.target)) {
+                closeSidebar();
             }
         }
     </script>
