@@ -239,12 +239,12 @@
             let sidebar = document.getElementById("sidebar-container");
             let mainContainer = document.getElementById("main-container");
 
-            if (sidebar.style.left === "0px" && !sidebar.contains(event.target)) {
+            if (sidebar.style.left === "0px" && !sidebar.contains(event.target) && !event.target.closest('.w3-button')) {
                 closeSidebar();
             }
         }
 
-        document.getElementById("main-container").onclick = handleMainClick;
+        document.getElementById("main-container").addEventListener('click', handleMainClick);
     </script>
 </body>
 </html>
