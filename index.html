@@ -84,7 +84,7 @@
     </div>
 
     <!-- Main Content Container -->
-    <div id="main-container" onclick="handleMainClick(event)">
+    <div id="main-container">
         <div class="w3-container">
             <button class="w3-button w3-xlarge" onclick="openSidebar()">&#9776;</button>
         </div>
@@ -213,7 +213,7 @@
 
         function toggleDropdown(id) {
             var x = document.getElementById(id);
-            if (x.style.display === 'none') {
+            if (x.style.display === 'none' || x.style.display === '') {
                 x.style.display = 'block';
             } else {
                 x.style.display = 'none';
@@ -243,6 +243,8 @@
                 closeSidebar();
             }
         }
+
+        document.getElementById("main-container").onclick = handleMainClick;
     </script>
 </body>
 </html>
