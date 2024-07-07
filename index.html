@@ -57,7 +57,7 @@
     <!-- Sidebar Container -->
     <div id="sidebar-container">
         <div class="w3-sidebar w3-bar-block w3-light-grey w3-card w3-animate-left">
-            <button class="w3-bar-item w3-button w3-large" onclick="closeSidebar()">Close &times;</button>
+            <button class="w3-bar-item w3-button w3-large" onclick="closeSidebar()">&times; Close</button>
             <a href="#" class="w3-bar-item w3-button">Recipes</a>
             <button class="w3-bar-item w3-button w3-dropdown-click" onclick="toggleDropdown('demoDropdown')">Ingredients</button>
             <div id="demoDropdown" class="w3-dropdown-content w3-bar-block w3-border" style="display:none;">
@@ -86,7 +86,7 @@
     <!-- Main Content Container -->
     <div id="main-container">
         <div class="w3-container">
-            <button class="w3-button w3-xlarge" onclick="openSidebar()">&#9776;</button>
+            <button class="w3-button w3-xlarge" onclick="toggleSidebar()">&#9776;</button>
         </div>
 
         <div class="w3-container">
@@ -201,14 +201,25 @@
     </div>
 
     <script>
-        function openSidebar() {
-            document.getElementById("sidebar-container").style.left = "0";
-            document.getElementById("main-container").classList.add('shift-right');
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar-container");
+            var mainContainer = document.getElementById("main-container");
+
+            if (sidebar.style.left === "0px") {
+                sidebar.style.left = "-200px";
+                mainContainer.classList.remove('shift-right');
+            } else {
+                sidebar.style.left = "0";
+                mainContainer.classList.add('shift-right');
+            }
         }
 
         function closeSidebar() {
-            document.getElementById("sidebar-container").style.left = "-200px";
-            document.getElementById("main-container").classList.remove('shift-right');
+            var sidebar = document.getElementById("sidebar-container");
+            var mainContainer = document.getElementById("main-container");
+
+            sidebar.style.left = "-200px";
+            mainContainer.classList.remove('shift-right');
         }
 
         function toggleDropdown(id) {
