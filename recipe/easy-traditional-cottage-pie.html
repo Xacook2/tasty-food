@@ -101,12 +101,17 @@
         .nutritional-info li {
             display: inline-block;
             margin: 0 auto;
-            width: 10%;
+            width: 20%;
             text-align: center;
             padding: 5px;
             border: 1px solid black;
             background-color:rgb(193, 225, 193);
         }
+
+        @media (max-width: 768px) {
+    .recipe-info li {
+        width:10%;
+    }
 
         .print-button {
             text-align: center;
@@ -153,10 +158,10 @@
             <section class="nutritional-info">
                 <h2>Nutritional Information</h2>
                 <ul>
-                    <li>Calories: 645 kcal</li>
-                    <li>Protein: 35g</li>
-                    <li>Carbs: 40g</li>
-                    <li>Fat: 39g</li>
+                    <li>kcal 645 kcal</li>
+                    <li>Protein 35g</li>
+                    <li>Carbs 40g</li>
+                    <li>Fat 39g</li>
                 </ul>
             </section>
         </section>
