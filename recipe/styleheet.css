@@ -1,1 +1,12 @@
+.recipe-image {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+}
 
+.crossed-out {
+    text-decoration: line-through;
+    color: #888;
+}
