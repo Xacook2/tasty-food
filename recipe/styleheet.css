@@ -1,109 +1,34 @@
-/* Custom styles for Cottage Pie recipe */
+/* styles.css */
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
+/* Custom styles for the header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em;
 }
 
-.container {
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: rgb(252, 250, 242);
-    border: 1px solid black;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.recipe-image {
-    display: block;
-    margin: 0 auto;
-    width: 90%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.recipe-info {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-.recipe-info li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.recipe-info li:before {
-    display: inline-block;
-    content: '';
-    width: 20px;
-    height: 20px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-right: 5px;
-}
-
-.serves:before {
-    background-image: url('serving-icon.jpg');
-}
-
-.time:before {
-    background-image: url('clock-icon.png');
-}
-
-.person:before {
-    background-image: url('person-icon.png');
-}
-
-.nutritional-info li:before {
-    background-image: url('nutrition-icon.png');
-}
-
-.ingredients,
-.instructions {
-    margin-bottom: 20px;
-}
-
-.ingredients ul,
-.instructions ol {
-    padding-left: 20px;
-}
-
-.ingredients li,
-.instructions li {
-    margin-bottom: 10px;
-}
-
-.nutritional-info ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nutritional-info li {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 5px;
-    border: 1px solid black;
-    background-color: rgb(193, 225, 193);
-}
-
-.print-button {
-    text-align: center;
-    margin-top: 20px;
-}
-
+/* Custom styles for the footer */
 footer {
-    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em;
+}
+
+/* Custom styles for the print button */
+.print-button {
     margin-top: 20px;
 }
 
-.crossed-out {
-    text-decoration: line-through;
-    color: #888;
+/* Example of additional custom styling */
+.container {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .instructions,
+    .ingredients {
+        width: 100%;
+    }
 }
