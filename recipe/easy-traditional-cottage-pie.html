@@ -7,113 +7,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cottage Pie Recipe</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="myScript.js"></script>
 </head>
 <body>
-    <header class="w3-container w3-center">
+    <header class="w3-container">
         <h1>Cottage Pie</h1>
     </header>
-
-    <main class="w3-container w3-content w3-margin-top">
-        <div class="w3-row-padding">
-            <div class="w3-col l5 s12">
-                <img src="cottage-pie.jpg" alt="Cottage Pie" class="w3-image w3-round-large">
-                <ul class="w3-ul w3-center">
-                    <li class="w3-padding-small w3-text-indigo">Cook: 1hr 20mins</li>
-                    <li class="w3-padding-small w3-text-indigo">Prep: 20mins</li>
-                    <li class="w3-padding-small w3-text-indigo">Total: 1hr 40mins</li>
-                    <li class="w3-padding-small w3-text-indigo">Serves: 6-8</li>
-                    <li class="w3-padding-small w3-text-indigo">by Xavi Jenkins</li>
+    
+    <main class="container w3-card-4">
+        <section class="recipe-details">
+            <img src="cottage-pie.jpg" alt="Cottage Pie" class="recipe-image w3-round-large">
+            <ul class="recipe-info">
+                <li class="time">Cook: 1hr 20mins</li>
+                <li class="time">Prep: 20mins</li>
+                <li class="time">Total: 1hr 40mins</li>
+                <li class="serves">Serves: 6-8</li>
+                <li class="person">by Xavi Jenkins</li>
+            </ul>
+            <section class="nutritional-info">
+                <h2>Nutritional Information</h2>
+                <ul class="w3-ul">
+                    <li>Calories: 645 kcal</li>
+                    <li>Protein: 35g</li>
+                    <li>Carbs: 40g</li>
+                    <li>Fat: 39g</li>
                 </ul>
-                <section class="w3-container w3-margin-bottom">
-                    <h2 class="w3-text-indigo">Nutritional Information</h2>
-                    <ul class="w3-ul w3-center">
-                        <li>Calories: 645 kcal</li>
-                        <li>Protein: 35g</li>
-                        <li>Carbs: 40g</li>
-                        <li>Fat: 39g</li>
-                    </ul>
-                </section>
-            </div>
-            <div class="w3-col l7 s12">
-                <section class="w3-container w3-margin-bottom">
-                    <h2 class="w3-text-indigo">Ingredients</h2>
-                    <ul class="w3-ul">
-                        <li><input type="checkbox" id="ingredient1"> <label for="ingredient1">1kg ground beef</label></li>
-                        <li><input type="checkbox" id="ingredient2"> <label for="ingredient2">2 tbs Worcestershire sauce (optional)</label></li>
-                        <li><input type="checkbox" id="ingredient3"> <label for="ingredient3">2 tbs tomato purée</label></li>
-                        <li><input type="checkbox" id="ingredient4"> <label for="ingredient4">1.5 tsp thyme</label></li>
-                        <li><input type="checkbox" id="ingredient5"> <label for="ingredient5">2 tsp dried oregano</label></li>
-                        <li><input type="checkbox" id="ingredient6"> <label for="ingredient6">1 small glass of red wine (optional)</label></li>
-                        <li><input type="checkbox" id="ingredient7"> <label for="ingredient7">200g carrots</label></li>
-                        <li><input type="checkbox" id="ingredient8"> <label for="ingredient8">300g mushrooms</label></li>
-                        <li><input type="checkbox" id="ingredient9"> <label for="ingredient9">1kg potatoes</label></li>
-                        <li><input type="checkbox" id="ingredient10"> <label for="ingredient10">50g butter</label></li>
-                        <li><input type="checkbox" id="ingredient11"> <label for="ingredient11">175ml milk</label></li>
-                        <li><input type="checkbox" id="ingredient12"> <label for="ingredient12">2 onions</label></li>
-                        <li><input type="checkbox" id="ingredient13"> <label for="ingredient13">4 garlic cloves</label></li>
-                        <li><input type="checkbox" id="ingredient14"> <label for="ingredient14">200g grated cheese</label></li>
-                        <li><input type="checkbox" id="ingredient15"> <label for="ingredient15">1 beef stock cube (optional)</label></li>
-                        <li><input type="checkbox" id="ingredient16"> <label for="ingredient16">2 tbs vegetable oil (for frying)</label></li>
-                    </ul>
-                </section>
-                <section class="w3-container w3-margin-bottom">
-                    <h2 class="w3-text-indigo">Instructions</h2>
-                    <ol class="w3-ol">
-                        <li><input type="checkbox" id="step1"> <label for="step1">Cut up 200g of carrots, 2 onions, 300g of mushrooms, 1kg of potatoes, and peel and crush 4 cloves of garlic.</label></li>
-                        <li><input type="checkbox" id="step2"> <label for="step2">Preheat the oven to 200°C.</label></li>
-                        <li><input type="checkbox" id="step3"> <label for="step3">In a large frying pan, sauté the carrots and onions in 2 tbs of vegetable oil for 3 minutes until the onions are translucent.</label></li>
-                        <li><input type="checkbox" id="step4"> <label for="step4">Add 1kg of ground beef, mushrooms, and crushed garlic to the pan. Fry until the beef is browned.</label></li>
-                        <li><input type="checkbox" id="step5"> <label for="step5">Add a small glass of red wine, 2 tbs Worcestershire sauce, 2 tbs tomato purée, and a beef stock cube. Reduce heat to simmer.</label></li>
-                        <li><input type="checkbox" id="step6"> <label for="step6">While the filling simmers, boil the potatoes in salted water for 15-30 minutes until soft. Drain.</label></li>
-                        <li><input type="checkbox" id="step7"> <label for="step7">In a saucepan, heat 175ml of milk and 50g of butter until butter melts. Mash the potatoes and mix with milk and butter mixture.</label></li>
-                        <li><input type="checkbox" id="step8"> <label for="step8">Preheat the oven to 180°C. Transfer the beef filling into a large ovenproof dish. Spread mashed potatoes evenly over the filling.</label></li>
-                        <li><input type="checkbox" id="step9"> <label for="step9">Sprinkle 200g of grated cheese over the mashed potatoes.</label></li>
-                        <li><input type="checkbox" id="step10"> <label for="step10">Bake in the preheated oven for 30 minutes or until the top is golden and the filling is bubbling.</label></li>
-                    </ol>
-                </section>
-            </div>
-        </div>
-
-        <div class="w3-container w3-center w3-margin-top">
-            <button class="w3-button w3-indigo" onclick="window.print()">Print Recipe</button>
+            </section>
+        </section>
+        
+        <section class="ingredients w3-half">
+            <h2>Ingredients</h2>
+            <ul class="w3-ul">
+                <li><input type="checkbox" id="ingredient1"> <label for="ingredient1">1kg ground beef</label></li>
+                <li><input type="checkbox" id="ingredient2"> <label for="ingredient2">2 tbs Worcestershire sauce (optional)</label></li>
+                <li><input type="checkbox" id="ingredient3"> <label for="ingredient3">2 tbs tomato purée</label></li>
+                <li><input type="checkbox" id="ingredient4"> <label for="ingredient4">1.5 tsp thyme</label></li>
+                <li><input type="checkbox" id="ingredient5"> <label for="ingredient5">2 tsp dried oregano</label></li>
+                <li><input type="checkbox" id="ingredient6"> <label for="ingredient6">1 small glass of red wine (optional)</label></li>
+                <li><input type="checkbox" id="ingredient7"> <label for="ingredient7">200g carrots</label></li>
+                <li><input type="checkbox" id="ingredient8"> <label for="ingredient8">300g mushrooms</label></li>
+                <li><input type="checkbox" id="ingredient9"> <label for="ingredient9">1kg potatoes</label></li>
+                <li><input type="checkbox" id="ingredient10"> <label for="ingredient10">50g butter</label></li>
+                <li><input type="checkbox" id="ingredient11"> <label for="ingredient11">175ml milk</label></li>
+                <li><input type="checkbox" id="ingredient12"> <label for="ingredient12">2 onions</label></li>
+                <li><input type="checkbox" id="ingredient13"> <label for="ingredient13">4 garlic cloves</label></li>
+                <li><input type="checkbox" id="ingredient14"> <label for="ingredient14">200g grated cheese</label></li>
+                <li><input type="checkbox" id="ingredient15"> <label for="ingredient15">1 beef stock cube (optional)</label></li>
+                <li><input type="checkbox" id="ingredient16"> <label for="ingredient16">2 tbs vegetable oil (for frying)</label></li>
+            </ul>
+        </section>
+        
+        <section class="instructions w3-half">
+            <h2>Instructions</h2>
+            <ol class="w3-ul">
+                <li><input type="checkbox" id="step1"> <label for="step1">Cut up 200g of carrots, 2 onions, 300g of mushrooms, 1kg of potatoes, and peel and crush 4 cloves of garlic.</label></li>
+                <li><input type="checkbox" id="step2"> <label for="step2">Preheat the oven to 200°C.</label></li>
+                <li><input type="checkbox" id="step3"> <label for="step3">In a large frying pan, sauté the carrots and onions in 2 tbs of vegetable oil for 3 minutes until the onions are translucent.</label></li>
+                <li><input type="checkbox" id="step4"> <label for="step4">Add 1kg of ground beef, mushrooms, and crushed garlic to the pan. Fry until the beef is browned.</label></li>
+                <li><input type="checkbox" id="step5"> <label for="step5">Add a small glass of red wine, 2 tbs Worcestershire sauce, 2 tbs tomato purée, and a beef stock cube. Reduce heat to simmer.</label></li>
+                <li><input type="checkbox" id="step6"> <label for="step6">While the filling simmers, boil the potatoes in salted water for 15-30 minutes until soft. Drain.</label></li>
+                <li><input type="checkbox" id="step7"> <label for="step7">In a saucepan, heat 175ml of milk and 50g of butter until butter melts. Mash the potatoes and mix with milk and butter mixture.</label></li>
+                <li><input type="checkbox" id="step8"> <label for="step8">Preheat the oven to 180°C. Transfer the beef filling into a large ovenproof dish. Spread mashed potatoes evenly over the filling.</label></li>
+                <li><input type="checkbox" id="step9"> <label for="step9">Sprinkle 200g of grated cheese over the mashed potatoes.</label></li>
+                <li><input type="checkbox" id="step10"> <label for="step10">Bake in the preheated oven for 30 minutes or until the top is golden and the filling is bubbling.</label></li>
+            </ol>
+        </section>
+        
+        <div class="print-button w3-center">
+            <button class="w3-button w3-green" onclick="window.print()">Print Recipe</button>
         </div>
     </main>
-
-    <footer class="w3-container w3-center w3-margin-top">
+    
+    <footer class="w3-container w3-center">
         <p>&copy; 2024 Xavi Jenkins. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript to handle checkbox functionality -->
-    <script>
-        // Get all checkboxes for ingredients and instructions
-        const ingredientCheckboxes = document.querySelectorAll('.ingredients input[type="checkbox"]');
-        const instructionCheckboxes = document.querySelectorAll('.instructions input[type="checkbox"]');
-
-        // Function to handle checkbox change
-        function handleCheckboxChange(checkbox, label) {
-            if (checkbox.checked) {
-                label.classList.add('crossed-out');
-            } else {
-                label.classList.remove('crossed-out');
-            }
-        }
-
-        // Add event listeners for ingredients checkboxes
-        ingredientCheckboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                const label = this.nextElementSibling;
-                handleCheckboxChange(this, label);
-            });
-        });
-
-        // Add event listeners for instructions checkboxes
-        instructionCheckboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                const label = this.nextElementSibling;
-                handleCheckboxChange(this, label);
-            });
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
