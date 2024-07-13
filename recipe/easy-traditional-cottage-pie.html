@@ -7,17 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cottage Pie Recipe</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="stylesheet.css">
-    <script src="myScript.js"></script>
+	<link rel="stylesheet" href="stylesheet.css">
+	<script src="myScript.js"></script>
 </head>
-<body>
-    <header class="w3-container">
+<body class="w3-light-grey">
+    <main class="container">
+    <header>
         <h1>Cottage Pie</h1>
     </header>
-    
-    <main class="container w3-card-4">
         <section class="recipe-details">
-            <img src="cottage-pie.jpg" alt="Cottage Pie" class="recipe-image w3-round-large">
+            <img src="cottage-pie.jpg" alt="Cottage Pie" class="recipe-image">
             <ul class="recipe-info">
                 <li class="time">Cook: 1hr 20mins</li>
                 <li class="time">Prep: 20mins</li>
@@ -27,7 +26,7 @@
             </ul>
             <section class="nutritional-info">
                 <h2>Nutritional Information</h2>
-                <ul class="w3-ul">
+                <ul>
                     <li>Calories: 645 kcal</li>
                     <li>Protein: 35g</li>
                     <li>Carbs: 40g</li>
@@ -36,9 +35,9 @@
             </section>
         </section>
         
-        <section class="ingredients w3-half">
+        <section class="ingredients">
             <h2>Ingredients</h2>
-            <ul class="w3-ul">
+            <ul>
                 <li><input type="checkbox" id="ingredient1"> <label for="ingredient1">1kg ground beef</label></li>
                 <li><input type="checkbox" id="ingredient2"> <label for="ingredient2">2 tbs Worcestershire sauce (optional)</label></li>
                 <li><input type="checkbox" id="ingredient3"> <label for="ingredient3">2 tbs tomato purée</label></li>
@@ -58,9 +57,9 @@
             </ul>
         </section>
         
-        <section class="instructions w3-half">
+        <section class="instructions">
             <h2>Instructions</h2>
-            <ol class="w3-ul">
+            <ol>
                 <li><input type="checkbox" id="step1"> <label for="step1">Cut up 200g of carrots, 2 onions, 300g of mushrooms, 1kg of potatoes, and peel and crush 4 cloves of garlic.</label></li>
                 <li><input type="checkbox" id="step2"> <label for="step2">Preheat the oven to 200°C.</label></li>
                 <li><input type="checkbox" id="step3"> <label for="step3">In a large frying pan, sauté the carrots and onions in 2 tbs of vegetable oil for 3 minutes until the onions are translucent.</label></li>
@@ -68,19 +67,19 @@
                 <li><input type="checkbox" id="step5"> <label for="step5">Add a small glass of red wine, 2 tbs Worcestershire sauce, 2 tbs tomato purée, and a beef stock cube. Reduce heat to simmer.</label></li>
                 <li><input type="checkbox" id="step6"> <label for="step6">While the filling simmers, boil the potatoes in salted water for 15-30 minutes until soft. Drain.</label></li>
                 <li><input type="checkbox" id="step7"> <label for="step7">In a saucepan, heat 175ml of milk and 50g of butter until butter melts. Mash the potatoes and mix with milk and butter mixture.</label></li>
-                <li><input type="checkbox" id="step8"> <label for="step8">Preheat the oven to 180°C. Transfer the beef filling into a large ovenproof dish. Spread mashed potatoes evenly over the filling.</label></li>
-                <li><input type="checkbox" id="step9"> <label for="step9">Sprinkle 200g of grated cheese over the mashed potatoes.</label></li>
-                <li><input type="checkbox" id="step10"> <label for="step10">Bake in the preheated oven for 30 minutes or until the top is golden and the filling is bubbling.</label></li>
+                <li><input type="checkbox" id="step8"> <label for="step8">Layer the beef filling in a baking dish. Spread mashed potatoes over the top. Sprinkle 200g grated cheese.</label></li>
+                <li><input type="checkbox" id="step9"> <label for="step9">Bake in the preheated oven for 25-30 minutes until golden brown.</label></li>
+                <li><input type="checkbox" id="step10"> <label for="step10">Remove from oven and let it cool for 5 minutes before serving.</label></li>
             </ol>
         </section>
         
-        <div class="print-button w3-center">
-            <button class="w3-button w3-green" onclick="window.print()">Print Recipe</button>
-        </div>
+        <section class="print-button">
+            <button onclick="window.print()">Print Recipe</button>
+        </section>
+        
+        <footer>
+            <p>&copy; 2024 Xavi Jenkins. All rights reserved.</p>
+        </footer>
     </main>
-    
-    <footer class="w3-container w3-center">
-        <p>&copy; 2024 Xavi Jenkins. All rights reserved.</p>
-    </footer>
 </body>
 </html>
