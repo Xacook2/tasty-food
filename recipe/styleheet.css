@@ -1,9 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(252, 250, 242);
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .recipe-image {
     display: block;
     margin: 0 auto;
     width: 90%;
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
+}
+
+.recipe-info {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.recipe-info li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.recipe-info li:before {
+    display: inline-block;
+    content: '';
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.serves:before {
+    background-image: url('serving-icon.jpg');
+}
+
+.time:before {
+    background-image: url('clock-icon.png');
+}
+
+.person:before {
+    background-image: url('person-icon.png');
+}
+
+.nutritional-info ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.nutritional-info li {
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(193, 225, 193);
+    width: 100px;
+    text-align: center;
+}
+
+.ingredients,
+.instructions {
+    margin-bottom: 20px;
+}
+
+.ingredients ul,
+.instructions ol {
+    padding-left: 20px;
+}
+
+.ingredients li,
+.instructions li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .recipe-info li {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .nutritional-info ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nutritional-info li {
+        width: 80%;
+    }
+}
+
+.print-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
 }
 
 .crossed-out {
