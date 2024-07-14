@@ -142,7 +142,9 @@ footer {
         flex: 1 1 40%;
         margin-right: 20px;
     }
-    .nutritional-information li{
-        width:20%;
+    .nutritional-information li {
+        width: 20%;
     }
 }
+
+
