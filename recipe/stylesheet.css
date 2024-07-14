@@ -64,7 +64,7 @@ header {
 }
 
 .person:before {
-    background-image: url('person-icon.png'); 
+    background-image: url('person-icon.svg'); 
 }
 
 .nutritional-info li:before {
