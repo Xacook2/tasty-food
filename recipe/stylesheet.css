@@ -145,7 +145,7 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-    .nutritonal-information li {
+    .nutritonal-info li {
         width:20%;
     }
 }
