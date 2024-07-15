@@ -56,11 +56,11 @@ header {
 }
 
 .serves:before {
-    background-image: url('serving-icon.jpg'); 
+    background-image: url('serving-icon.svg'); 
 }
 
 .time:before {
-    background-image: url('clock-icon.png'); 
+    background-image: url('clock-icon.svg'); 
 }
 
 .person:before {
