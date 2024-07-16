@@ -34,14 +34,12 @@ header {
 
 .recipe-info {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
     text-align: center;
 }
 
 .recipe-info li {
     display: inline-block;
-    margin: 0 10px;
+    margin: 10px 10px;
 }
 
 .recipe-info li:before {
