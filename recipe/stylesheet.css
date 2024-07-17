@@ -35,8 +35,9 @@ header {
 .recipe-info {
     list-style-type: none;
     text-align: center;
-    width:80%;
-    margin:auto;
+    width: 80%;
+    margin: auto;
+    padding: 0px;
 }
 
 .recipe-info li {
