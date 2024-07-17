@@ -42,8 +42,7 @@ header {
 
 .recipe-info li {
     display: inline-block;
-    margin: 10px 0px;
-    float:left;
+    margin: 10px 10px;
 }
 
 .recipe-info li:before {
@@ -55,6 +54,7 @@ header {
     background-repeat: no-repeat;
     background-size: contain;
     vertical-align: middle;
+    float:left
 }
 
 .serves:before {
