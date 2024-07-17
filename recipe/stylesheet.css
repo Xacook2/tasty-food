@@ -38,6 +38,7 @@ header {
     width: 80%;
     margin-left: 10%;
     padding: 0px;
+    float: left;
 }
 
 .recipe-info li {
