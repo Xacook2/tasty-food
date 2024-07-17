@@ -43,6 +43,7 @@ header {
 .recipe-info li {
     display: inline-block;
     margin: 10px 0px;
+    float:left;
 }
 
 .recipe-info li:before {
