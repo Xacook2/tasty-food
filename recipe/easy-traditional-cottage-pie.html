@@ -8,60 +8,62 @@
     <title>Cottage Pie Recipe</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="stylesheet.css">
-</head> 
+</head>
 <body class="w3-light-grey">
-    <main class="w3-container">
+    <main class="container w3-card w3-white w3-margin-top w3-padding">
         <header>
-            <h1>Cottage Pie</h1>
+            <h1 class="w3-center">Cottage Pie</h1>
         </header>
-        <section class="unit-toggle-button">
-            <button id="metric-btn">Metric</button>
-            <button id="imperial-btn">Imperial</button>
+        <section class="w3-center">
+            <button class="w3-button w3-green" onclick="switchToMetric()">Metric</button>
+            <button class="w3-button w3-blue" onclick="switchToImperial()">Imperial</button>
         </section>
         <section class="recipe-details">
-            <img src="cottage-pie.jpeg" alt="Cottage Pie" class="recipe-image w3-card-4" loading="lazy">
-            <ul class="recipe-info w3-ul w3-card-4 w3-center">
+            <img src="cottage-pie.jpeg" alt="Cottage Pie" class="recipe-image w3-round" loading="lazy">
+            <ul class="recipe-info w3-center">
                 <li class="time">Cook: 1hr 20mins</li>
                 <li class="time">Prep: 20mins</li>
                 <li class="time">Total: 1hr 40mins</li>
                 <li class="serves">Serves: 6-8</li>
             </ul>
             <section class="nutritional-info">
-                <h2>Nutritional Information</h2>
-                <ul class="w3-ul w3-card-4">
+                <h2 class="w3-center">Nutritional Information</h2>
+                <ul class="w3-center">
                     <li class="metric">kcal 645</li>
                     <li class="metric">Protein 35g</li>
                     <li class="metric">Carbs 40g</li>
                     <li class="metric">Fat 39g</li>
-                    <li class="imperial" style="display: none;">kcal 645</li>
-                    <li class="imperial" style="display: none;">Protein 1.2 lbs</li>
-                    <li class="imperial" style="display: none;">Carbs 1.5 lbs</li>
-                    <li class="imperial" style="display: none;">Fat 1.5 lbs</li>
+                    <li class="imperial" style="display:none;">kcal 645</li>
+                    <li class="imperial" style="display:none;">Protein 1.2oz</li>
+                    <li class="imperial" style="display:none;">Carbs 1.4oz</li>
+                    <li class="imperial" style="display:none;">Fat 1.4oz</li>
                 </ul>
             </section>
         </section>
-        <section class="ingredients w3-card-4 w3-padding">
+        
+        <section class="ingredients">
             <h2>Ingredients</h2>
             <ul>
-                <li><input type="checkbox" id="ingredient1"> <label for="ingredient1" data-metric="1kg ground beef" data-imperial="2.2 lbs ground beef">1kg ground beef</label></li>
-                <li><input type="checkbox" id="ingredient2"> <label for="ingredient2" data-metric="2 tbs Worcestershire sauce (optional)" data-imperial="2 tbs Worcestershire sauce (optional)">2 tbs Worcestershire sauce (optional)</label></li>
-                <li><input type="checkbox" id="ingredient3"> <label for="ingredient3" data-metric="2 tbs tomato purée" data-imperial="2 tbs tomato purée">2 tbs tomato purée</label></li>
-                <li><input type="checkbox" id="ingredient4"> <label for="ingredient4" data-metric="1.5 tsp thyme" data-imperial="1.5 tsp thyme">1.5 tsp thyme</label></li>
-                <li><input type="checkbox" id="ingredient5"> <label for="ingredient5" data-metric="2 tsp dried oregano" data-imperial="2 tsp dried oregano">2 tsp dried oregano</label></li>
-                <li><input type="checkbox" id="ingredient6"> <label for="ingredient6" data-metric="1 small glass of red wine (optional)" data-imperial="1 small glass of red wine (optional)">1 small glass of red wine (optional)</label></li>
-                <li><input type="checkbox" id="ingredient7"> <label for="ingredient7" data-metric="200g carrots" data-imperial="7 oz carrots">200g carrots</label></li>
-                <li><input type="checkbox" id="ingredient8"> <label for="ingredient8" data-metric="300g mushrooms" data-imperial="10.5 oz mushrooms">300g mushrooms</label></li>
-                <li><input type="checkbox" id="ingredient9"> <label for="ingredient9" data-metric="1kg potatoes" data-imperial="2.2 lbs potatoes">1kg potatoes</label></li>
-                <li><input type="checkbox" id="ingredient10"> <label for="ingredient10" data-metric="50g butter" data-imperial="3.5 tbsp butter">50g butter</label></li>
-                <li><input type="checkbox" id="ingredient11"> <label for="ingredient11" data-metric="175ml milk" data-imperial="6 oz milk">175ml milk</label></li>
-                <li><input type="checkbox" id="ingredient12"> <label for="ingredient12" data-metric="2 onions" data-imperial="2 onions">2 onions</label></li>
-                <li><input type="checkbox" id="ingredient13"> <label for="ingredient13" data-metric="4 garlic cloves" data-imperial="4 garlic cloves">4 garlic cloves</label></li>
-                <li><input type="checkbox" id="ingredient14"> <label for="ingredient14" data-metric="200g grated cheese" data-imperial="7 oz grated cheese">200g grated cheese</label></li>
-                <li><input type="checkbox" id="ingredient15"> <label for="ingredient15" data-metric="1 beef stock cube (optional)" data-imperial="1 beef stock cube (optional)">1 beef stock cube (optional)</label></li>
-                <li><input type="checkbox" id="ingredient16"> <label for="ingredient16" data-metric="2 tbs vegetable oil (for frying)" data-imperial="2 tbs vegetable oil (for frying)">2 tbs vegetable oil (for frying)</label></li>
+                <li><input type="checkbox" id="ingredient1"> <label for="ingredient1" class="metric">1kg ground beef</label><label for="ingredient1" class="imperial" style="display:none;">2.2 lbs ground beef</label></li>
+                <li><input type="checkbox" id="ingredient2"> <label for="ingredient2">2 tbs Worcestershire sauce (optional)</label></li>
+                <li><input type="checkbox" id="ingredient3"> <label for="ingredient3">2 tbs tomato purée</label></li>
+                <li><input type="checkbox" id="ingredient4"> <label for="ingredient4">1.5 tsp thyme</label></li>
+                <li><input type="checkbox" id="ingredient5"> <label for="ingredient5">2 tsp dried oregano</label></li>
+                <li><input type="checkbox" id="ingredient6"> <label for="ingredient6">1 small glass of red wine (optional)</label></li>
+                <li><input type="checkbox" id="ingredient7"> <label for="ingredient7" class="metric">200g carrots</label><label for="ingredient7" class="imperial" style="display:none;">7 oz carrots</label></li>
+                <li><input type="checkbox" id="ingredient8"> <label for="ingredient8" class="metric">300g mushrooms</label><label for="ingredient8" class="imperial" style="display:none;">10.5 oz mushrooms</label></li>
+                <li><input type="checkbox" id="ingredient9"> <label for="ingredient9" class="metric">1kg potatoes</label><label for="ingredient9" class="imperial" style="display:none;">2.2 lbs potatoes</label></li>
+                <li><input type="checkbox" id="ingredient10"> <label for="ingredient10" class="metric">50g butter</label><label for="ingredient10" class="imperial" style="display:none;">1.8 oz butter</label></li>
+                <li><input type="checkbox" id="ingredient11"> <label for="ingredient11" class="metric">175ml milk</label><label for="ingredient11" class="imperial" style="display:none;">6 fl oz milk</label></li>
+                <li><input type="checkbox" id="ingredient12"> <label for="ingredient12">2 onions</label></li>
+                <li><input type="checkbox" id="ingredient13"> <label for="ingredient13">4 garlic cloves</label></li>
+                <li><input type="checkbox" id="ingredient14"> <label for="ingredient14" class="metric">200g grated cheese</label><label for="ingredient14" class="imperial" style="display:none;">7 oz grated cheese</label></li>
+                <li><input type="checkbox" id="ingredient15"> <label for="ingredient15">1 beef stock cube (optional)</label></li>
+                <li><input type="checkbox" id="ingredient16"> <label for="ingredient16">2 tbs vegetable oil (for frying)</label></li>
             </ul>
         </section>
-        <section class="instructions w3-card-4 w3-padding">
+        
+        <section class="instructions">
             <h2>Instructions</h2>
             <ol>
                 <li><input type="checkbox" id="step1"> <label for="step1">Cut up 200g of carrots, 2 onions, 300g of mushrooms, 1kg of potatoes, and peel and crush 4 cloves of garlic.</label></li>
@@ -76,13 +78,15 @@
                 <li><input type="checkbox" id="step10"> <label for="step10">Remove from oven and let it cool for 5 minutes before serving.</label></li>
             </ol>
         </section>
+        
         <section class="print-button">
-            <button onclick="window.print()">Print Recipe</button>
+            <button class="w3-button w3-blue" onclick="window.print()">Print Recipe</button>
         </section>
+        
         <footer>
-            <p>&copy; 2024 Xavi Jenkins. All rights reserved.</p>
+            <p class="w3-center">&copy; 2024 Xavi Jenkins. All rights reserved.</p>
         </footer>
     </main>
-    <script src="script.js"></script>
+    <script src="myScript.js"></script>
 </body>
 </html>
