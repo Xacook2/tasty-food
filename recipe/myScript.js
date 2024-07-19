@@ -8,18 +8,18 @@ function handleCheckboxChange(checkbox, label) {
 }
 
 // Function to toggle between metric and imperial units
-function toggleUnits() {
+function toggleUnits(unit) {
     const labels = document.querySelectorAll('.ingredients li label');
     const nutritionalInfo = document.querySelectorAll('.nutritional-info li');
     
-    const isMetric = document.querySelector('.ingredients li label').dataset.metric;
+    const isMetric = (unit === 'metric');
     
     labels.forEach(label => {
-        label.textContent = label.dataset[isMetric ? 'imperial' : 'metric'];
+        label.textContent = label.dataset[unit];
     });
     
     nutritionalInfo.forEach(item => {
-        item.style.display = item.classList.contains(isMetric ? 'metric' : 'imperial') ? 'list-item' : 'none';
+        item.style.display = item.classList.contains(unit) ? 'list-item' : 'none';
     });
 }
 
