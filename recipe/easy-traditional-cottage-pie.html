@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cottage Pie Recipe</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="w3-light-grey">
     <main class="w3-container">
@@ -15,7 +15,8 @@
             <h1>Cottage Pie</h1>
         </header>
         <section class="unit-toggle-button">
-            <button onclick="toggleUnits()">Toggle Units</button>
+            <button onclick="toggleUnits('metric')">Metric</button>
+            <button onclick="toggleUnits('imperial')">Imperial</button>
         </section>
         <section class="recipe-details">
             <img src="cottage-pie.jpeg" alt="Cottage Pie" class="recipe-image w3-card-4" loading="lazy">
