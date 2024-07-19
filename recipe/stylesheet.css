@@ -42,7 +42,7 @@ header {
 
 .recipe-info li {
     display: inline-block;
-    margin: 10px 10px;
+    margin: 10px 35%;
     float: left;
 }
 
@@ -114,7 +114,7 @@ header {
 .nutrtional-information h2 {
     width: 30%;
     clear: left;
-    margin: 10px auto;
+    margin: 10px ;
 }
 
 .print-button {
