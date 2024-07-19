@@ -6,10 +6,11 @@
     <meta name="author" content="Xavi Jenkins">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cottage Pie Recipe</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body class="w3-light-grey">
-    <main class="container">
+    <main class="w3-container">
         <header>
             <h1>Cottage Pie</h1>
         </header>
@@ -17,8 +18,8 @@
             <button onclick="toggleUnits()">Toggle Units</button>
         </section>
         <section class="recipe-details">
-            <img src="cottage-pie.jpeg" alt="Cottage Pie" class="recipe-image" loading="lazy">
-            <ul class="recipe-info">
+            <img src="cottage-pie.jpeg" alt="Cottage Pie" class="recipe-image w3-card-4" loading="lazy">
+            <ul class="recipe-info w3-ul w3-card-4 w3-center">
                 <li class="time">Cook: 1hr 20mins</li>
                 <li class="time">Prep: 20mins</li>
                 <li class="time">Total: 1hr 40mins</li>
@@ -26,7 +27,7 @@
             </ul>
             <section class="nutritional-info">
                 <h2>Nutritional Information</h2>
-                <ul>
+                <ul class="w3-ul w3-card-4">
                     <li class="metric">kcal 645</li>
                     <li class="metric">Protein 35g</li>
                     <li class="metric">Carbs 40g</li>
@@ -39,7 +40,7 @@
                 </ul>
             </section>
         </section>
-        <section class="ingredients">
+        <section class="ingredients w3-card-4 w3-padding">
             <h2>Ingredients</h2>
             <ul>
                 <li><input type="checkbox" id="ingredient1"> <label for="ingredient1" data-metric="1kg ground beef" data-imperial="2.2 lbs ground beef">1kg ground beef</label></li>
@@ -60,7 +61,7 @@
                 <li><input type="checkbox" id="ingredient16"> <label for="ingredient16" data-metric="2 tbs vegetable oil (for frying)" data-imperial="2 tbs vegetable oil (for frying)">2 tbs vegetable oil (for frying)</label></li>
             </ul>
         </section>
-        <section class="instructions">
+        <section class="instructions w3-card-4 w3-padding">
             <h2>Instructions</h2>
             <ol>
                 <li><input type="checkbox" id="step1"> <label for="step1">Cut up 200g of carrots, 2 onions, 300g of mushrooms, 1kg of potatoes, and peel and crush 4 cloves of garlic.</label></li>
