@@ -111,10 +111,8 @@ header {
     text-align: center;
 }
 
-.nutrtional-information h2 {
-    width: 30%;
-    clear: left;
-    margin: 10px ;
+.nutritional-info h2 {
+    clear: left; 
 }
 
 .print-button {
