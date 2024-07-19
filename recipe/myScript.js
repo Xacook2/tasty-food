@@ -42,3 +42,12 @@ instructionCheckboxes.forEach(checkbox => {
         handleCheckboxChange(this, label);
     });
 });
+
+// Add event listeners for unit toggle buttons
+document.getElementById('metric-btn').addEventListener('click', function() {
+    toggleUnits('metric');
+});
+
+document.getElementById('imperial-btn').addEventListener('click', function() {
+    toggleUnits('imperial');
+});
