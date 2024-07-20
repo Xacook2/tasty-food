@@ -34,46 +34,45 @@
     </section>
     <section class="ingredients">
         <h2>Ingredients</h2>
-        <!-- Buttons to toggle between metric and imperial -->
         <div class="w3-center">
             <button class="w3-button w3-blue" onclick="showMetric()">Metric</button>
             <button class="w3-button w3-blue" onclick="showImperial()">Imperial</button>
         </div>
         <ul>
             <!-- Metric System Ingredients -->
-            <li class="metric">1kg ground beef</li>
-            <li class="metric">2 tbs Worcestershire sauce (optional)</li>
-            <li class="metric">2 tbs tomato purée</li>
-            <li class="metric">1.5 tsp thyme</li>
-            <li class="metric">2 tsp dried oregano</li>
-            <li class="metric">1 small glass of red wine (optional)</li>
-            <li class="metric">200g carrots</li>
-            <li class="metric">300g mushrooms</li>
-            <li class="metric">1kg potatoes</li>
-            <li class="metric">50g butter</li>
-            <li class="metric">175ml milk</li>
-            <li class="metric">2 onions</li>
-            <li class="metric">4 garlic cloves</li>
-            <li class="metric">200g grated cheese</li>
-            <li class="metric">1 beef stock cube (optional)</li>
-            <li class="metric">2 tbs vegetable oil (for frying)</li>
+            <li class="metric"><input type="checkbox" id="ingredient1-metric"> <label for="ingredient1-metric">1kg ground beef</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient2-metric"> <label for="ingredient2-metric">2 tbs Worcestershire sauce (optional)</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient3-metric"> <label for="ingredient3-metric">2 tbs tomato purée</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient4-metric"> <label for="ingredient4-metric">1.5 tsp thyme</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient5-metric"> <label for="ingredient5-metric">2 tsp dried oregano</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient6-metric"> <label for="ingredient6-metric">1 small glass of red wine (optional)</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient7-metric"> <label for="ingredient7-metric">200g carrots</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient8-metric"> <label for="ingredient8-metric">300g mushrooms</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient9-metric"> <label for="ingredient9-metric">1kg potatoes</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient10-metric"> <label for="ingredient10-metric">50g butter</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient11-metric"> <label for="ingredient11-metric">175ml milk</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient12-metric"> <label for="ingredient12-metric">2 onions</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient13-metric"> <label for="ingredient13-metric">4 garlic cloves</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient14-metric"> <label for="ingredient14-metric">200g grated cheese</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient15-metric"> <label for="ingredient15-metric">1 beef stock cube (optional)</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient16-metric"> <label for="ingredient16-metric">2 tbs vegetable oil (for frying)</label></li>
             <!-- Imperial System Ingredients -->
-            <li class="imperial" style="display:none;">2.2 lbs ground beef</li>
-            <li class="imperial" style="display:none;">2 tbs Worcestershire sauce (optional)</li>
-            <li class="imperial" style="display:none;">2 tbs tomato paste</li>
-            <li class="imperial" style="display:none;">1.5 tsp thyme</li>
-            <li class="imperial" style="display:none;">2 tsp dried oregano</li>
-            <li class="imperial" style="display:none;">1 small glass of red wine (optional)</li>
-            <li class="imperial" style="display:none;">7 oz carrots</li>
-            <li class="imperial" style="display:none;">10.5 oz mushrooms</li>
-            <li class="imperial" style="display:none;">2.2 lbs potatoes</li>
-            <li class="imperial" style="display:none;">1.8 oz butter</li>
-            <li class="imperial" style="display:none;">6 fl oz milk</li>
-            <li class="imperial" style="display:none;">2 onions</li>
-            <li class="imperial" style="display:none;">4 garlic cloves</li>
-            <li class="imperial" style="display:none;">7 oz grated cheese</li>
-            <li class="imperial" style="display:none;">1 beef stock cube (optional)</li>
-            <li class="imperial" style="display:none;">2 tbs vegetable oil (for frying)</li>
+            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient1-imperial"> <label for="ingredient1-imperial">2.2 lbs ground beef</label></li>
+            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient2-imperial"> <label for="ingredient2-imperial">2 tbs Worcestershire sauce (optional)</label></li>
+            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient3-imperial"> <label for="ingredient3-imperial">2 tbs tomato paste</label></li>
+            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient4-imperial"> <label for="ingredient4-imperial">1.5 tsp thyme</label></li>
+            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient5-imperial"> <label for="ingredient5-imperial">2 tsp dried oregano</label></li>
+            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient6-imperial"> <label for="ingredient6-imperial">1 small glass of red wine (optional)</label></li>
+            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient7-imperial"> <label for="ingredient7-imperial">7 oz carrots</label></li>
+            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient8-imperial"> <label for="ingredient8-imperial">10.5 oz mushrooms</label></li>
+            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient9-imperial"> <label for="ingredient9-imperial">2.2 lbs potatoes</label></li>
+            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient10-imperial"> <label for="ingredient10-imperial">1.8 oz butter</label></li>
+            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient11-imperial"> <label for="ingredient11-imperial">6 fl oz milk</label></li>
+            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient12-imperial"> <label for="ingredient12-imperial">2 onions</label></li>
+            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient13-imperial"> <label for="ingredient13-imperial">4 garlic cloves</label></li>
+            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient14-imperial"> <label for="ingredient14-imperial">7 oz grated cheese</label></li>
+            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient15-imperial"> <label for="ingredient15-imperial">1 beef stock cube (optional)</label></li>
+            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient16-imperial"> <label for="ingredient16-imperial">2 tbs vegetable oil (for frying)</label></li>
         </ul>
     </section>
     <section class="instructions">
