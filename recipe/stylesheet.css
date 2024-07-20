@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .container {
     width: 80%;
     margin: 20px auto;
@@ -15,11 +16,13 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+
 header {
     text-align: center;
     margin-bottom: 20px;
     width: 100%;
 }
+
 .recipe-image {
     display: block;
     margin: 0 auto;
@@ -28,6 +31,7 @@ header {
     height: auto;
     border-radius: 10px;
 }
+
 .recipe-info {
     list-style-type: none;
     text-align: center;
@@ -35,11 +39,13 @@ header {
     margin: 20px auto;
     padding: 0px;
 }
+
 .recipe-info li {
     display: inline-block;
     margin: 10px 35%;
     float: left;
 }
+
 .recipe-info li:before {
     display: inline-block;
     content: '';
@@ -49,39 +55,49 @@ header {
     background-repeat: no-repeat;
     background-size: contain;
     vertical-align: middle;
-    float:left;
+    float: left;
 }
+
 .serves:before {
     background-image: url('serving-icon.svg');
 }
+
 .time:before {
     background-image: url('clock-icon.svg');
 }
+
 .person:before {
     background-image: url('person-icon.svg');
 }
+
 .nutritional-info li:before {
     background-image: url('nutrition-icon.png');
 }
+
 .ingredients, .instructions {
     margin-bottom: 20px;
     flex: 1 1 50%;
 }
+
 .instructions {
     flex: 1 1 100%;
 }
+
 .ingredients ul, .instructions ol {
     padding-left: 20px;
 }
+
 .ingredients li, .instructions li {
     margin-bottom: 10px;
 }
+
 .nutritional-info ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
+
 .nutritional-info li {
     display: inline-block;
     margin: 0 10px;
@@ -91,14 +107,17 @@ header {
     flex: 1;
     text-align: center;
 }
+
 .nutritional-info h2 {
     clear: left;
 }
+
 .print-button {
     text-align: center;
     margin-top: 20px;
     width: 100%;
 }
+
 .print-button button {
     padding: 10px 20px;
     background-color: #007BFF; /* Blue color */
@@ -108,27 +127,33 @@ header {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 .print-button button:hover {
     background-color: #0056b3; /* Darker shade on hover */
 }
+
 footer {
     text-align: center;
     margin-top: 20px;
     width: 100%;
 }
+
 .crossed-out {
     text-decoration: line-through;
     color: #888;
 }
+
 @media only screen and (min-width: 768px) {
     .ingredients, .instructions {
         flex: 1 1 40%;
         margin-right: 20px;
     }
+
     .nutritional-info li {
         white-space: nowrap;
     }
 }
+
 @media only screen and (max-width: 768px) {
     .nutritional-info li {
         width: 20%;
@@ -138,6 +163,12 @@ footer {
         white-space: normal;
     }
 }
+
 .metric, .imperial {
     display: list-item;
+}
+
+.ingredients input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle;
 }
