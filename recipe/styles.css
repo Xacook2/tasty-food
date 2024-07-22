@@ -108,6 +108,7 @@
 
             <li class="metric"><input type="checkbox" id="instruction10-metric"> <label for="instruction10-metric">Transfer the meat mixture into a baking dish. Spread the mashed potatoes on top.</label></li>
             <li class="imperial" style="display: none;"><input type="checkbox" id="instruction10-imperial"> <label for="instruction10-imperial">Transfer the meat mixture into a baking dish. Spread the mashed potatoes on top.</label></li>
+            
             <li class="metric"><input type="checkbox" id="instruction11-metric"> <label for="instruction11-metric">Bake for 25-30 minutes or until the top is golden brown.</label></li>
             <li class="imperial" style="display: none;"><input type="checkbox" id="instruction11-imperial"> <label for="instruction11-imperial">Bake for 25-30 minutes or until the top is golden brown.</label></li>
         </ul>
