@@ -1,11 +1,15 @@
-// Function to show metric instructions
+// Function to show ingredients in metric units
 function showMetric() {
+    document.querySelectorAll('.metric').forEach(el => el.style.display = 'list-item');
+    document.querySelectorAll('.imperial').forEach(el => el.style.display = 'none');
     document.querySelectorAll('.metric-instructions').forEach(el => el.style.display = 'block');
     document.querySelectorAll('.imperial-instructions').forEach(el => el.style.display = 'none');
 }
 
-// Function to show imperial instructions
+// Function to show ingredients in imperial units
 function showImperial() {
+    document.querySelectorAll('.imperial').forEach(el => el.style.display = 'list-item');
+    document.querySelectorAll('.metric').forEach(el => el.style.display = 'none');
     document.querySelectorAll('.imperial-instructions').forEach(el => el.style.display = 'block');
     document.querySelectorAll('.metric-instructions').forEach(el => el.style.display = 'none');
 }
