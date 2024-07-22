@@ -96,16 +96,8 @@ header {
     text-align: center;
 }
 
-.instructions, .ingredients {
-    margin-bottom: 20px;
-}
-
-.ingredients ul, .instructions ol {
-    padding-left: 20px;
-}
-
-.ingredients li, .instructions li {
-    margin-bottom: 10px;
+.ingredients ul{
+    clear: left;
 }
 
 .print-button {
