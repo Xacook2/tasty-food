@@ -28,15 +28,6 @@ header h1 {
     margin: 0 auto;
 }
 
-/* Recipe details and info */
-.recipe-info {
-    list-style: none;
-    padding: 0;
-}
-
-.recipe-info li {
-    margin: 5px 0;
-}
 
 /* Button styling */
 .btn {
@@ -48,16 +39,8 @@ header h1 {
     margin: 0 10px;
 }
 
-/* Ingredients and instructions styling */
-.ingredients ul,
-.instructions ol {
-    list-style: none;
-    padding: 0;
-}
-
-.ingredients li,
-.instructions li {
-    margin: 10px 0;
+ul {
+ list-style:none;
 }
 
 /* Checkbox styling */
