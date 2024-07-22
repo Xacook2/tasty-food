@@ -42,6 +42,7 @@ header {
 
 .recipe-info li {
     display: inline-block;
+    width: 20%
     margin: auto;
     float: left;
 }
