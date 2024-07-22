@@ -34,7 +34,8 @@ header {
     list-style-type: none;
     text-align: left;
     padding: 0;
-    margin: 20px 0;
+    width: 90%
+    margin: 9% 10px 11% 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -43,7 +44,7 @@ header {
 
 .recipe-info li {
     flex: 1 1 auto;
-    min-width: 200px;
+    max-width: 200px;
     margin: 10px;
     padding: 10px;
     display: flex;
