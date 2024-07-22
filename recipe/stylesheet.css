@@ -45,6 +45,7 @@ header {
     max-width: 80%;
     margin: auto;
     float: left;
+    white-space: nowrap;
 }
 
 .recipe-info li:before {
