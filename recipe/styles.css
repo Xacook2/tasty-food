@@ -1,103 +1,159 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: white;
+    width: 80%;
+    margin: 20px auto;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(252, 250, 242);
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-header h1 {
+header {
     text-align: center;
-    color: #333;
-}
-
-.recipe-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 .recipe-image {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .recipe-info {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
-    display: flex;
-    justify-content: space-around;
     width: 100%;
     margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 .recipe-info li {
-    background: none;
+    flex: 1 1 200px;
+    margin: 0;
     padding: 10px;
-    border-radius: 8px;
-    font-weight: bold;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: none;
+    background: none;
+}
+
+.serves:before {
+    background-image: url('serving-icon.svg');
+}
+
+.time:before {
+    background-image: url('clock-icon.svg');
+}
+
+.person:before {
+    background-image: url('person-icon.svg');
 }
 
 .nutritional-info {
-    background: none;
-    padding: 20px;
-    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.nutritional-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nutritional-info li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: rgb(193, 225, 193);
+    flex: 1 1 150px;
+    text-align: center;
+    box-sizing: border-box;
+    min-height: 60px; /* Ensures boxes are large enough for two lines of text */
+}
+
+.nutritional-info h2 {
     width: 100%;
     text-align: center;
 }
 
-.nutritional-info h2 {
-    margin-bottom: 10px;
+.instructions, .ingredients {
+    margin-bottom: 20px;
 }
 
-.nutritional-info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.nutritional-info li {
-    display: inline-block;
-    width: 45%;
-    margin-bottom: 10px;
-}
-
-.ingredients, .instructions {
-    margin-top: 20px;
-}
-
-.ingredients h2, .instructions h2 {
-    text-align: center;
-}
-
-.ingredients ul, .instructions ul {
-    list-style: none;
-    padding: 0;
+.ingredients ul, .instructions ol {
+    padding-left: 20px;
 }
 
 .ingredients li, .instructions li {
-    background: none;
-    padding: 10px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
+    margin-bottom: 10px;
 }
 
-.ingredients li input, .instructions li input {
-    margin-right: 10px;
+.print-button {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.print-button button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.print-button button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
 }
 
 .crossed-out {
     text-decoration: line-through;
-    color: gray;
+    color: #888;
+}
+
+.metric, .imperial {
+    display: list-item;
+}
+
+.ingredients input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 .btn {
-    margin-bottom: 20px;
+    float: left;
+}
+
+@media only screen and (max-width: 768px) {
+    .nutritional-info li {
+        flex: 1 1 calc(50% - 20px);
+    }
 }
