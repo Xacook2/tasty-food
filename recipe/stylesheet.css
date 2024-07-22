@@ -173,6 +173,7 @@ footer {
 
 .metric, .imperial {
     display: list-item;
+    float: left;
 }
 
 .ingredients input[type="checkbox"] {
