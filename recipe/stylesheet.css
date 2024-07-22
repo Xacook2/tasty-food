@@ -148,6 +148,19 @@ footer {
     color: #888;
 }
 
+.metric, .imperial {
+    display: list-item;
+}
+
+.ingredients input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.btn {
+    float-left
+}
+
 @media only screen and (min-width: 768px) {
     .ingredients, .instructions {
         flex: 1 1 40%;
@@ -169,11 +182,4 @@ footer {
     }
 }
 
-.metric, .imperial {
-    display: list-item;
-}
 
-.ingredients input[type="checkbox"] {
-    margin-right: 10px;
-    vertical-align: middle;
-}
