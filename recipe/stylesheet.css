@@ -41,6 +41,8 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px; 
+    margin-left: 0 calc(10% + 20px); 
+    
 }
 
 .recipe-info li {
@@ -48,6 +50,7 @@ header {
     max-width: 80%;
     margin: auto;
     float: left;
+    margin: 0 calc(10% + 20px); 
 }
 
 .recipe-info li:before {
