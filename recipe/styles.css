@@ -1,134 +1,72 @@
+/* styles.css */
+
+/* General layout and font styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
     margin: 0;
     padding: 0;
-}
-
-.container {
-    width: 80%; 
-    margin: 20px auto;
-    padding: 20px;
-    background-color: rgb(252, 250, 242);
-    border: 1px solid black;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.recipe-image {
-    display: block;
-    margin: 0 auto;
-    width: 90%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.recipe-info {
-    list-style-type: none;
-    text-align: left;
-    padding: 0;
-    width: 90%;
-    margin: 10px 4.5% 10px 5.5%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.recipe-info li {
-    flex: 1 1 200px;
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.recipe-info li:before {
-    display: inline-block;
-    content: '';
-    margin-right: 5px;
-    width: 20px;
-    height: 20px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    vertical-align: middle;
-}
-
-.serves:before {
-    background-image: url('serving-icon.svg');
-}
-
-.time:before {
-    background-image: url('clock-icon.svg');
-}
-
-.person:before {
-    background-image: url('person-icon.svg');
-}
-
-.nutritional-info ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.nutritional-info li {
-    border: 1px solid black;
-    background-color: rgb(193, 225, 193);
-    padding: 10px;
-    min-width: 120px;
-    text-align: center;
     box-sizing: border-box;
 }
 
-.nutritional-info h2 {
-    width: 100%;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
 }
 
-.ingredients, .instructions {
-    margin-bottom: 20px;
-}
-
-.instructions {
-    width: 100%;
-}
-
-.ingredients ul, .instructions ol {
-    padding-left: 20px;
-}
-
-.ingredients li, .instructions li {
-    margin-bottom: 10px;
-}
-
-.print-button {
+header h1 {
     text-align: center;
+}
+
+/* Recipe image styling */
+.recipe-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Recipe details and info */
+.recipe-info {
+    list-style: none;
+    padding: 0;
+}
+
+.recipe-info li {
+    margin: 5px 0;
+}
+
+/* Button styling */
+.btn {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.w3-button {
+    margin: 0 10px;
+}
+
+/* Ingredients and instructions styling */
+.ingredients ul,
+.instructions ol {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredients li,
+.instructions li {
+    margin: 10px 0;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Hide metric and imperial instructions */
+.metric-instructions,
+.imperial-instructions {
     margin-top: 20px;
-}
-
-.print-button button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.print-button button:hover {
-    background-color: #0056b3;
-}
-
-footer {
-    text-align: center;
 }
