@@ -36,12 +36,11 @@ header {
     list-style-type: none;
     text-align: center;
     max-width: 80%;
-    margin: 20px auto;
     padding: 0px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px; 
-    margin-left: 0 calc(10% + 20px); 
+    margin-left: calc(10% + 20px); 
     
 }
 
