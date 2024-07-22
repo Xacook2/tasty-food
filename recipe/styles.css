@@ -61,10 +61,6 @@ header {
     background-image: url('clock-icon.svg');
 }
 
-.person:before {
-    background-image: url('person-icon.svg');
-}
-
 .nutritional-info {
     margin: 20px 0;
 }
