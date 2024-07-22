@@ -1,102 +1,181 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Cottage pie recipe by Xavi Jenkins">
-    <meta name="author" content="Xavi Jenkins">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cottage Pie Recipe</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="stylesheet.css">
-</head>
-<body class="w3-light-grey">
-<main class="container">
-    <header>
-        <h1>Cottage Pie</h1>
-    </header>
-    <section class="recipe-details">
-        <img src="cottage-pie.jpeg" alt="Cottage Pie" class="recipe-image" loading="lazy">
-        <ul class="recipe-info">
-            <li class="time">Cook: 1hr 20mins</li>
-            <li class="time">Prep: 20mins</li>
-            <li class="time">Total: 1hr 40mins</li>
-            <li class="serves">Serves: 6-8</li>
-        </ul>
-        <section class="nutritional-info">
-            <h2>Nutritional Information</h2>
-            <ul>
-                <li>kcal 645</li>
-                <li>Protein 35g</li>
-                <li>Carbs 40g</li>
-                <li>Fat 39g</li>
-            </ul>
-        </section>
-    </section>
-    <section class="ingredients">
-        <h2>Ingredients</h2>
-        <div class="w3-center">
-            <button class="w3-button w3-blue" onclick="showMetric()">Metric</button>
-            <button class="w3-button w3-blue" onclick="showImperial()">Imperial</button>
-        </div>
-        <ul>
-            <!-- Metric System Ingredients -->
-            <li class="metric"><input type="checkbox" id="ingredient1-metric"> <label for="ingredient1-metric">1kg ground beef</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient2-metric"> <label for="ingredient2-metric">2 tbs Worcestershire sauce (optional)</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient3-metric"> <label for="ingredient3-metric">2 tbs tomato purée</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient4-metric"> <label for="ingredient4-metric">1.5 tsp thyme</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient5-metric"> <label for="ingredient5-metric">2 tsp dried oregano</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient6-metric"> <label for="ingredient6-metric">1 small glass of red wine (optional)</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient7-metric"> <label for="ingredient7-metric">200g carrots</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient8-metric"> <label for="ingredient8-metric">300g mushrooms</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient9-metric"> <label for="ingredient9-metric">1kg potatoes</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient10-metric"> <label for="ingredient10-metric">50g butter</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient11-metric"> <label for="ingredient11-metric">175ml milk</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient12-metric"> <label for="ingredient12-metric">2 onions</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient13-metric"> <label for="ingredient13-metric">4 garlic cloves</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient14-metric"> <label for="ingredient14-metric">200g grated cheese</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient15-metric"> <label for="ingredient15-metric">1 beef stock cube (optional)</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient16-metric"> <label for="ingredient16-metric">2 tbs vegetable oil (for frying)</label></li>
-            <!-- Imperial System Ingredients -->
-            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient1-imperial"> <label for="ingredient1-imperial">2.2 lbs ground beef</label></li>
-            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient2-imperial"> <label for="ingredient2-imperial">2 tbs Worcestershire sauce (optional)</label></li>
-            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient3-imperial"> <label for="ingredient3-imperial">2 tbs tomato paste</label></li>
-            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient4-imperial"> <label for="ingredient4-imperial">1.5 tsp thyme</label></li>
-            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient5-imperial"> <label for="ingredient5-imperial">2 tsp dried oregano</label></li>
-            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient6-imperial"> <label for="ingredient6-imperial">1 small glass of red wine (optional)</label></li>
-            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient7-imperial"> <label for="ingredient7-imperial">7 oz carrots</label></li>
-            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient8-imperial"> <label for="ingredient8-imperial">10.5 oz mushrooms</label></li>
-            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient9-imperial"> <label for="ingredient9-imperial">2.2 lbs potatoes</label></li>
-            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient10-imperial"> <label for="ingredient10-imperial">1.8 oz butter</label></li>
-            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient11-imperial"> <label for="ingredient11-imperial">6 fl oz milk</label></li>
-            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient12-imperial"> <label for="ingredient12-imperial">2 onions</label></li>
-            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient13-imperial"> <label for="ingredient13-imperial">4 garlic cloves</label></li>
-            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient14-imperial"> <label for="ingredient14-imperial">7 oz grated cheese</label></li>
-            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient15-imperial"> <label for="ingredient15-imperial">1 beef stock cube (optional)</label></li>
-            <li class="imperial" style="display:none;"><input type="checkbox" id="ingredient16-imperial"> <label for="ingredient16-imperial">2 tbs vegetable oil (for frying)</label></li>
-        </ul>
-    </section>
-    <section class="instructions">
-        <h2>Instructions</h2>
-        <ol>
-            <li><input type="checkbox" id="step1"> <label for="step1">Cut up 200g of carrots, 2 onions, 300g of mushrooms, 1kg of potatoes, and peel and crush 4 cloves of garlic.</label></li>
-            <li><input type="checkbox" id="step2"> <label for="step2">Preheat the oven to 200°C.</label></li>
-            <li><input type="checkbox" id="step3"> <label for="step3">In a large frying pan, sauté the carrots and onions in 2 tbs of vegetable oil for 3 minutes until the onions are translucent.</label></li>
-            <li><input type="checkbox" id="step4"> <label for="step4">Add 1kg of ground beef, mushrooms, and crushed garlic to the pan. Fry until the beef is browned.</label></li>
-            <li><input type="checkbox" id="step5"> <label for="step5">Add a small glass of red wine, 2 tbs Worcestershire sauce, 2 tbs tomato purée, and a beef stock cube. Reduce heat to simmer.</label></li>
-            <li><input type="checkbox" id="step6"> <label for="step6">While the filling simmers, boil the potatoes in salted water for 15-30 minutes until soft. Drain.</label></li>
-            <li><input type="checkbox" id="step7"> <label for="step7">In a saucepan, heat 175ml of milk and 50g of butter until butter melts. Mash the potatoes and mix with milk and butter mixture.</label></li>
-            <li><input type="checkbox" id="step8"> <label for="step8">Layer the beef filling in a baking dish. Spread mashed potatoes over the top. Sprinkle 200g grated cheese.</label></li>
-            <li><input type="checkbox" id="step9"> <label for="step9">Bake in the preheated oven for 25-30 minutes until golden brown.</label></li>
-            <li><input type="checkbox" id="step10"> <label for="step10">Remove from oven and let it cool for 5 minutes before serving.</label></li>
-        </ol>
-    </section>
-    <section class="print-button">
-        <button onclick="window.print()">Print Recipe</button>
-    </section>
-    <footer>
-        <p>&copy; 2024 Xavi Jenkins. All rights reserved.</p>
-    </footer>
-</main>
-<script src="myScript.js"></script>
-</body>
-</html>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(252, 250, 242);
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.recipe-image {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.recipe-info {
+    list-style-type: none;
+    text-align: left;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.recipe-info li {
+    flex: 1 1 auto;
+    min-width: 200px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+}
+
+.recipe-info li:before {
+    display: inline-block;
+    content: '';
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.serves:before {
+    background-image: url('serving-icon.svg');
+}
+
+.time:before {
+    background-image: url('clock-icon.svg');
+}
+
+.person:before {
+    background-image: url('person-icon.svg');
+}
+
+.nutritional-info li:before {
+    background-image: url('nutrition-icon.png');
+}
+
+.ingredients, .instructions {
+    margin-bottom: 20px;
+}
+
+.instructions {
+    width: 100%;
+}
+
+.ingredients ul, .instructions ol {
+    padding-left: 20px;
+}
+
+.ingredients li, .instructions li {
+    margin-bottom: 10px;
+}
+
+.nutritional-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nutritional-info li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px;
+    border: 1px solid black;
+    background-color: rgb(193, 225, 193);
+    flex: 1 1 auto;
+    min-width: 100px;
+    text-align: center;
+}
+
+.nutritional-info h2 {
+    clear: left;
+}
+
+.print-button {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.print-button button {
+    padding: 10px 20px;
+    background-color: #007BFF; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.print-button button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.crossed-out {
+    text-decoration: line-through;
+    color: #888;
+}
+
+@media only screen and (min-width: 768px) {
+    .ingredients, .instructions {
+        flex: 1 1 40%;
+        margin-right: 20px;
+    }
+
+    .nutritional-info li {
+        white-space: nowrap;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nutritional-info li {
+        width: 20%;
+        display: inline-block;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+}
+
+.metric, .imperial {
+    display: list-item;
+}
+
+.ingredients input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
