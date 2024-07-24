@@ -42,16 +42,13 @@ header {
 }
 
 .recipe-info li {
-    flex: 1 1 200px; /* Adjusts size of recipe info items */
-    margin: 0;
+    flex: 1 1 200px; 
     padding: 10px;
-    text-align: center;
-    border: 1px solid #ddd; /* Border for visual separation */
+    text-align: left;
+    border: 1px solid #ddd; 
     border-radius: 5px;
-    box-shadow: none; /* No shadow */
-    background: none; /* No background color */
-}
-
+    box-shadow: none; 
+    background: none; 
 .serves:before {
     background-image: url('serving-icon.svg');
 }
