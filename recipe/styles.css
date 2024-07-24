@@ -37,7 +37,7 @@ header {
 .recipe-info {
     padding: 0;
     width: 100%;
-    margin: 10px 0;
+    margin: 9% 10px 11% 10px
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -50,6 +50,7 @@ header {
     padding: 10px;
     text-align: center;
     border-radius: 5px;
+    float:left;
 }
 
 .serves:before {
