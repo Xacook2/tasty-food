@@ -33,8 +33,8 @@ header {
 .recipe-info {
     list-style-type: none;
     padding: 0;
-    width: 100%;
-    margin: 10px 0;
+    width: 90%;
+    margin: 10px 4.5% 10px 5.5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
