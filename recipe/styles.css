@@ -1,7 +1,3 @@
-ul {
-    list-style-type: none;
-}
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
@@ -35,9 +31,10 @@ header {
 }
 
 .recipe-info {
+    list-style-type: none;
     padding: 0;
-    width: 90%;
-    margin: 10px 4.5% 10px 5.5%;
+    width: 100%;
+    margin: 10px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -45,11 +42,14 @@ header {
 }
 
 .recipe-info li {
-    flex: 1 1 200px;
+    flex: 1 1 200px; /* Adjusts size of recipe info items */
     margin: 0;
     padding: 10px;
-    text-align: left;
+    text-align: center;
+    border: 1px solid #ddd; /* Border for visual separation */
     border-radius: 5px;
+    box-shadow: none; /* No shadow */
+    background: none; /* No background color */
 }
 
 .serves:before {
@@ -60,17 +60,21 @@ header {
     background-image: url('clock-icon.svg');
 }
 
+.person:before {
+    background-image: url('person-icon.svg');
+}
+
 .nutritional-info {
     margin: 20px 0;
 }
 
 .nutritional-info ul {
+    list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    list-style-type: none;
 }
 
 .nutritional-info li {
@@ -81,10 +85,13 @@ header {
     padding: 10px;
     border: 1px solid black;
     background-color: rgb(193, 225, 193);
-    flex: 1 1 150px;
+    flex: 1 1 150px; /* Sets minimum size for each box */
     text-align: center;
     box-sizing: border-box;
-    min-height: 60px; /* Ensures boxes are large enough for two lines of text */
+}
+
+.nutritional-info li:nth-child(odd) {
+    border-right: none; /* Removes right border for better layout */
 }
 
 .nutritional-info h2 {
@@ -92,13 +99,20 @@ header {
     text-align: center;
 }
 
-.ingredients .instrutions ul{
-    list-style-type: none;
+.instructions, .ingredients {
+    margin-bottom: 20px;
 }
 
-.ingredients ul{
-    clear: left
-    margin-top: 10px;
+.instructions, .ingredients {
+    width: 100%;
+}
+
+.ingredients ul, .instructions ol {
+    padding-left: 20px;
+}
+
+.ingredients li, .instructions li {
+    margin-bottom: 10px;
 }
 
 .print-button {
@@ -109,7 +123,7 @@ header {
 
 .print-button button {
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #007BFF; /* Blue color */
     color: white;
     border: none;
     border-radius: 5px;
@@ -118,7 +132,7 @@ header {
 }
 
 .print-button button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker shade on hover */
 }
 
 footer {
@@ -127,9 +141,8 @@ footer {
     width: 100%;
 }
 
-.crossed-out {
-    text-decoration: line-through;
-    color: #888;
+.hidden {
+    display: none;
 }
 
 .metric, .imperial {
@@ -143,11 +156,10 @@ footer {
 
 .btn {
     float: left;
-    margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 768px) {
     .nutritional-info li {
-        flex: 1 1 calc(50% - 20px);
+        flex: 1 1 calc(50% - 20px); /* Two items per row on smaller screens */
     }
 }
