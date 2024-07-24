@@ -47,6 +47,10 @@ header {
     text-align: left;
     border-radius: 5px;
 
+.serves:before, .time:before, .person:before {
+    content: "";
+}
+
 .serves:before {
     background-image: url('serving-icon.svg');
 }
