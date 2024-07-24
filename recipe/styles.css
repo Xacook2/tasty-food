@@ -48,9 +48,8 @@ header {
     flex: 1 1 200px;
     margin: 0;
     padding: 10px;
-    text-align: center;
+    text-align: left;
     border-radius: 5px;
-    float:left;
 }
 
 .serves:before {
@@ -98,7 +97,8 @@ header {
 }
 
 .ingredients ul{
-    clear: left;
+    clear: left
+    margin-top: 10px;
 }
 
 .print-button {
