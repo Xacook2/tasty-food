@@ -25,10 +25,10 @@
         <section class="nutritional-info">
             <h2>Nutritional Information</h2>
             <ul>
-                <li>kcal 645</li>
-                <li>Protein 35g</li>
-                <li>Carbs 40g</li>
-                <li>Fat 39g</li>
+                <li class="info-box">kcal 645</li>
+                <li class="info-box">Protein 35g</li>
+                <li class="info-box">Carbs 40g</li>
+                <li class="info-box">Fat 39g</li>
             </ul>
         </section>
     </section>
@@ -82,11 +82,11 @@
                 <li><input type="checkbox" id="instruction9-metric"> <label for="instruction9-metric">Transfer the beef and vegetable mixture to a large baking dish. Spread the mashed potatoes over the top.</label></li>
                 <li><input type="checkbox" id="instruction10-metric"> <label for="instruction10-metric">Sprinkle 200g grated cheese over the mashed potatoes.</label></li>
                 <li><input type="checkbox" id="instruction11-metric"> <label for="instruction11-metric">Bake in the preheated oven for about 25-30 minutes or until the top is golden brown and the filling is bubbly.</label></li>
-                <li><input type="checkbox" id="instruction12-metric"> <label for="instruction12-metric">Let it cool slightly before serving.</label></li>
+                <li><input type="checkbox" id="instruction12-metric"> <label for="instruction12-metric">Let it cool for a few minutes before serving.</label></li>
             </ul>
         </div>
-
-        <!-- Imperial Instructions -->
+        
+        <!-- Imperial Instructions (Same steps but shown conditionally if needed) -->
         <div class="imperial-instructions" style="display: none;">
             <ul>
                 <li><input type="checkbox" id="instruction1-imperial"> <label for="instruction1-imperial">Peel the potatoes and cut them into chunks.</label></li>
@@ -100,11 +100,45 @@
                 <li><input type="checkbox" id="instruction9-imperial"> <label for="instruction9-imperial">Transfer the beef and vegetable mixture to a large baking dish. Spread the mashed potatoes over the top.</label></li>
                 <li><input type="checkbox" id="instruction10-imperial"> <label for="instruction10-imperial">Sprinkle 7oz grated cheese over the mashed potatoes.</label></li>
                 <li><input type="checkbox" id="instruction11-imperial"> <label for="instruction11-imperial">Bake in the preheated oven for about 25-30 minutes or until the top is golden brown and the filling is bubbly.</label></li>
-                <li><input type="checkbox" id="instruction12-imperial"> <label for="instruction12-imperial">Let it cool slightly before serving.</label></li>
+                <li><input type="checkbox" id="instruction12-imperial"> <label for="instruction12-imperial">Let it cool for a few minutes before serving.</label></li>
             </ul>
         </div>
     </section>
 </main>
-<script src="script.js"></script>
+<script>
+    // JavaScript function to toggle metric and imperial ingredients
+    function showMetric() {
+        document.querySelectorAll('.metric').forEach(function(el) {
+            el.style.display = 'list-item';
+        });
+        document.querySelectorAll('.imperial').forEach(function(el) {
+            el.style.display = 'none';
+        });
+        document.querySelector('.metric-instructions').style.display = 'block';
+        document.querySelector('.imperial-instructions').style.display = 'none';
+    }
+
+    function showImperial() {
+        document.querySelectorAll('.metric').forEach(function(el) {
+            el.style.display = 'none';
+        });
+        document.querySelectorAll('.imperial').forEach(function(el) {
+            el.style.display = 'list-item';
+        });
+        document.querySelector('.metric-instructions').style.display = 'none';
+        document.querySelector('.imperial-instructions').style.display = 'block';
+    }
+
+    // JavaScript function to handle checkbox crossing out text
+    document.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+            if (checkbox.checked) {
+                checkbox.nextElementSibling.classList.add('crossed-out');
+            } else {
+                checkbox.nextElementSibling.classList.remove('crossed-out');
+            }
+        });
+    });
+</script>
 </body>
 </html>
