@@ -48,6 +48,7 @@ ul {
     padding: 10px;
     text-align: left;
     border-radius: 5px;
+}
 
 .serves:before, .time:before, .person:before {
     content: "";
@@ -55,14 +56,29 @@ ul {
 
 .serves:before {
     background-image: url('serving-icon.svg');
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
 }
 
 .time:before {
     background-image: url('clock-icon.svg');
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
 }
 
 .person:before {
     background-image: url('person-icon.svg');
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
 }
 
 .nutritional-info {
@@ -80,12 +96,20 @@ ul {
 .nutritional-info ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nutritional-info li {
     display: inline-block;
     width: 45%;
     margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .instructions, .ingredients {
@@ -96,51 +120,23 @@ ul {
     width: 100%;
 }
 
-.ingredients ul, .instructions ol {
+.ingredients ul, .instructions ul {
     padding-left: 20px;
 }
 
 .ingredients li, .instructions li {
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
 
-.print-button {
-    text-align: center;
-    margin-top: 20px;
-    width: 100%;
-}
-
-.print-button button {
-    padding: 10px 20px;
-    background-color: #007BFF; /* Blue color */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.print-button button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-}
-
-footer {
-    text-align: center;
-    margin-top: 20px;
-    width: 100%;
-}
-
-.hidden {
-    display: none;
-}
-
-.metric, .imperial {
-    display: list-item;
-}
-
-.ingredients input[type="checkbox"] {
+.ingredients input[type="checkbox"], .instructions input[type="checkbox"] {
     margin-right: 10px;
     vertical-align: middle;
+}
+
+.crossed-out {
+    text-decoration: line-through;
 }
 
 .btn {
@@ -152,3 +148,4 @@ footer {
         flex: 1 1 calc(50% - 20px); /* Two items per row on smaller screens */
     }
 }
+
