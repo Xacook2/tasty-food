@@ -21,6 +21,9 @@ header {
     width: 100%;
 }
 
+ul {
+    list-style-type: none;
+
 .recipe-image {
     display: block;
     margin: 0 auto;
@@ -31,7 +34,6 @@ header {
 }
 
 .recipe-info {
-    list-style-type: none;
     padding: 0;
     width: 90%;
     margin: 10px 4.5% 10px 5.5%;
@@ -68,7 +70,6 @@ header {
 }
 
 .nutritional-info ul {
-    list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
@@ -91,11 +92,6 @@ header {
 
 .nutritional-info li:nth-child(odd) {
     border-right: none; /* Removes right border for better layout */
-}
-
-.nutritional-info h2 {
-    width: 100%;
-    text-align: center;
 }
 
 .instructions, .ingredients {
