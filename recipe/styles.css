@@ -37,7 +37,7 @@ header {
     margin: 10px 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -45,10 +45,8 @@ header {
     flex: 1 1 200px; 
     padding: 10px;
     text-align: left;
-    border: 1px solid #ddd; 
     border-radius: 5px;
-    box-shadow: none; 
-    background: none; 
+
 .serves:before {
     background-image: url('serving-icon.svg');
 }
