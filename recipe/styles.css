@@ -109,9 +109,11 @@ header {
     text-align: center;
     box-sizing: border-box;
     border-radius: 5px;
-    overflow-wrap: break-word; /* Ensure text wraps */
-    word-wrap: break-word;
-    white-space: normal; /* Allow text to wrap */
+    overflow-wrap: break-word;
+}
+
+.nutritional-info li span {
+    display: block;
 }
 
 .nutritional-info h2 {
