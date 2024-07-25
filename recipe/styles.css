@@ -50,6 +50,7 @@ header h1 {
     border-radius: 8px;
     width: 100%;
     text-align: center;
+    display: flex;*
 }
 
 .nutritional-info h2 {
@@ -65,6 +66,7 @@ header h1 {
     display: inline-block;
     width: 45%;
     margin-bottom: 10px;
+    flex: 1;
 }
 
 .ingredients, .instructions {
