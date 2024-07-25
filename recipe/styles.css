@@ -18,10 +18,12 @@ body {
 header {
     text-align: center;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 ul {
     list-style-type: none;
+    padding: 0;
 }
 
 .recipe-image {
@@ -33,24 +35,28 @@ ul {
 }
 
 .recipe-info {
-    padding: 0;
-    width: 90%;
-    margin: 10px 5.5% 10px 4.5%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    padding: 0;
 }
 
 .recipe-info li {
-    flex: 1 1 200px;
-    padding: 10px;
-    text-align: left;
-    border-radius: 5px;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.serves:before, .time:before, .person:before {
+.recipe-info li:before {
     content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .serves:before {
@@ -66,27 +72,98 @@ ul {
 }
 
 .nutritional-info {
-    background: none;
-    padding: 20px;
-    border-radius: 8px;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.nutritional-info h2 {
+.nutritional-boxes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nutritional-item {
+    flex: 1 1 45%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.nutritional-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.ingredients,
+.instructions {
+    margin-bottom: 20px;
+}
+
+.ingredients ul,
+.instructions ul {
+    padding-left: 0;
+}
+
+.ingredients li,
+.instructions li {
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
 }
 
-.nutritional-info ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.ingredients input[type="checkbox"],
+.instructions input[type="checkbox"] {
+    margin-right: 10px;
 }
 
-.nutritional-info li {
-    background-color: #e0f7e0; /* Light green background */
-    margin: 5
+.ingredients label,
+.instructions label {
+    flex: 1;
+}
+
+.ingredients input[type="checkbox"]:checked + label,
+.instructions input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.metric,
+.imperial,
+.metric-instructions,
+.imperial-instructions {
+    display: none;
+}
+
+.btn {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media only screen and (max-width: 768px) {
+    .nutritional-boxes {
+        flex-direction: column;
+    }
+
+    .nutritional-item {
+        flex: 1 1 100%;
+    }
+}
