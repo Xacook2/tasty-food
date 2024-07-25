@@ -36,8 +36,3 @@ document.querySelectorAll('.instructions input[type="checkbox"]').forEach(checkb
         }
     });
 });
-
-// Initial load - show metric by default
-document.addEventListener('DOMContentLoaded', (event) => {
-    showMetric();
-});
