@@ -2,130 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Cottage pie recipe by Xavi Jenkins">
+    <meta name="author" content="Xavi Jenkins">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Cottage Pie Recipe</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Your custom stylesheet -->
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Shepherd's Pie</h1>
-            <img class="recipe-image" src="shepherds-pie.jpg" alt="Shepherd's Pie">
-        </header>
-
-        <div class="recipe-info">
-            <li class="serves"><img src="serving-icon.svg" alt="Servings"> Serves: 4</li>
-            <li class="time"><img src="clock-icon.svg" alt="Time"> Time: 1 hr 30 mins</li>
-            <li class="person"><img src="person-icon.svg" alt="Difficulty"> Difficulty: Medium</li>
-        </div>
-
-        <div class="nutritional-info">
-            <h2>Nutritional Information (per serving)</h2>
-            <div class="nutritional-boxes">
-                <div class="nutritional-item">
-                    <img src="calories-icon.svg" alt="Calories">
-                    <span>Calories: 450 kcal</span>
-                </div>
-                <div class="nutritional-item">
-                    <img src="protein-icon.svg" alt="Protein">
-                    <span>Protein: 25g</span>
-                </div>
-                <div class="nutritional-item">
-                    <img src="carbs-icon.svg" alt="Carbohydrates">
-                    <span>Carbohydrates: 50g</span>
-                </div>
-                <div class="nutritional-item">
-                    <img src="fat-icon.svg" alt="Fat">
-                    <span>Fat: 20g</span>
-                </div>
-            </div>
-        </div>
-
-        <section class="ingredients">
-            <h2>Ingredients</h2>
-            <div class="metric">
-                <ul>
-                    <li><input type="checkbox" id="ingredient1-metric"> <label for="ingredient1-metric">1kg potatoes</label></li>
-                    <li><input type="checkbox" id="ingredient2-metric"> <label for="ingredient2-metric">1 tablespoon salt</label></li>
-                    <li><input type="checkbox" id="ingredient3-metric"> <label for="ingredient3-metric">1kg ground beef</label></li>
-                    <li><input type="checkbox" id="ingredient4-metric"> <label for="ingredient4-metric">2 onions, chopped</label></li>
-                    <li><input type="checkbox" id="ingredient5-metric"> <label for="ingredient5-metric">2 cloves garlic, minced</label></li>
-                    <li><input type="checkbox" id="ingredient6-metric"> <label for="ingredient6-metric">200g carrots, chopped</label></li>
-                    <li><input type="checkbox" id="ingredient7-metric"> <label for="ingredient7-metric">300g mushrooms, sliced</label></li>
-                    <li><input type="checkbox" id="ingredient8-metric"> <label for="ingredient8-metric">2 tablespoons tomato purée</label></li>
-                    <li><input type="checkbox" id="ingredient9-metric"> <label for="ingredient9-metric">2 tablespoons Worcestershire sauce</label></li>
-                    <li><input type="checkbox" id="ingredient10-metric"> <label for="ingredient10-metric">1 teaspoon thyme</label></li>
-                    <li><input type="checkbox" id="ingredient11-metric"> <label for="ingredient11-metric">1 teaspoon dried oregano</label></li>
-                    <li><input type="checkbox" id="ingredient12-metric"> <label for="ingredient12-metric">1 small glass red wine (optional)</label></li>
-                    <li><input type="checkbox" id="ingredient13-metric"> <label for="ingredient13-metric">50g butter</label></li>
-                    <li><input type="checkbox" id="ingredient14-metric"> <label for="ingredient14-metric">150ml milk</label></li>
-                    <li><input type="checkbox" id="ingredient15-metric"> <label for="ingredient15-metric">200g grated cheese</label></li>
-                    <li><input type="checkbox" id="ingredient16-metric"> <label for="ingredient16-metric">Salt and pepper to taste</label></li>
-                </ul>
-            </div>
-
-            <div class="imperial" style="display: none;">
-                <ul>
-                    <li><input type="checkbox" id="ingredient1-imperial"> <label for="ingredient1-imperial">2.2lb potatoes</label></li>
-                    <li><input type="checkbox" id="ingredient2-imperial"> <label for="ingredient2-imperial">1 tablespoon salt</label></li>
-                    <li><input type="checkbox" id="ingredient3-imperial"> <label for="ingredient3-imperial">2.2lb ground beef</label></li>
-                    <li><input type="checkbox" id="ingredient4-imperial"> <label for="ingredient4-imperial">2 onions, chopped</label></li>
-                    <li><input type="checkbox" id="ingredient5-imperial"> <label for="ingredient5-imperial">2 cloves garlic, minced</label></li>
-                    <li><input type="checkbox" id="ingredient6-imperial"> <label for="ingredient6-imperial">7oz carrots, chopped</label></li>
-                    <li><input type="checkbox" id="ingredient7-imperial"> <label for="ingredient7-imperial">10oz mushrooms, sliced</label></li>
-                    <li><input type="checkbox" id="ingredient8-imperial"> <label for="ingredient8-imperial">2 tablespoons tomato purée</label></li>
-                    <li><input type="checkbox" id="ingredient9-imperial"> <label for="ingredient9-imperial">2 tablespoons Worcestershire sauce</label></li>
-                    <li><input type="checkbox" id="ingredient10-imperial"> <label for="ingredient10-imperial">1 teaspoon thyme</label></li>
-                    <li><input type="checkbox" id="ingredient11-imperial"> <label for="ingredient11-imperial">1 teaspoon dried oregano</label></li>
-                    <li><input type="checkbox" id="ingredient12-imperial"> <label for="ingredient12-imperial">1 small glass red wine (optional)</label></li>
-                    <li><input type="checkbox" id="ingredient13-imperial"> <label for="ingredient13-imperial">1.7oz butter</label></li>
-                    <li><input type="checkbox" id="ingredient14-imperial"> <label for="ingredient14-imperial">6 fl oz milk</label></li>
-                    <li><input type="checkbox" id="ingredient15-imperial"> <label for="ingredient15-imperial">7oz grated cheese</label></li>
-                    <li><input type="checkbox" id="ingredient16-imperial"> <label for="ingredient16-imperial">Salt and pepper to taste</label></li>
-                </ul>
-            </div>
+<main class="container">
+    <header>
+        <h1>Cottage Pie</h1>
+    </header>
+    <section class="recipe-details">
+        <img src="cottage-pie.jpeg" alt="Cottage Pie" class="recipe-image" loading="lazy">
+        <ul class="recipe-info">
+            <li class="time"><img src="clock-icon.svg" alt="Clock icon"> Cook: 1hr 20mins</li>
+            <li class="time"><img src="clock-icon.svg" alt="Clock icon"> Prep: 20mins</li>
+            <li class="time"><img src="clock-icon.svg" alt="Clock icon"> Total: 1hr 40mins</li>
+            <li class="serves"><img src="serving-icon.svg" alt="Serving icon"> Serves: 6-8</li>
+        </ul>
+        <section class="nutritional-info">
+            <h2>Nutritional Information</h2>
+            <ul>
+                <li>kcal 645</li>
+                <li>Protein 35g</li>
+                <li>Carbs 40g</li>
+                <li>Fat 39g</li>
+            </ul>
         </section>
-
-        <section class="instructions">
-            <h2>Instructions</h2>
-            <div class="metric-instructions">
-                <ul>
-                    <li><input type="checkbox" id="instruction1-metric"> <label for="instruction1-metric">Peel the potatoes and cut them into chunks.</label></li>
-                    <li><input type="checkbox" id="instruction2-metric"> <label for="instruction2-metric">Fill a large saucepan with water, add a pinch of salt, and bring it to a boil. Add the potatoes and cook until they are tender (about 20 minutes).</label></li>
-                    <li><input type="checkbox" id="instruction3-metric"> <label for="instruction3-metric">While the potatoes are cooking, heat a large skillet over medium heat. Add 1kg ground beef and cook until browned. Drain any excess fat.</label></li>
-                    <li><input type="checkbox" id="instruction4-metric"> <label for="instruction4-metric">Add the chopped onions and garlic to the skillet and cook until they are soft and translucent.</label></li>
-                    <li><input type="checkbox" id="instruction5-metric"> <label for="instruction5-metric">Stir in 200g carrots and 300g mushrooms, and cook for a few minutes until they begin to soften.</label></li>
-                    <li><input type="checkbox" id="instruction6-metric"> <label for="instruction6-metric">Add 2 tablespoons tomato purée, 2 tablespoons Worcestershire sauce, 1 teaspoon thyme, and 1 teaspoon dried oregano. Pour in 1 small glass of red wine if using. Allow the mixture to simmer for about 10 minutes.</label></li>
-                    <li><input type="checkbox" id="instruction7-me
-                    <li><input type="checkbox" id="instruction7-metric"> <label for="instruction7-metric">Mash the cooked potatoes with 50g butter and 150ml milk until smooth. Season with salt and pepper to taste.</label></li>
-                    <li><input type="checkbox" id="instruction8-metric"> <label for="instruction8-metric">Preheat your oven to 200°C (400°F).</label></li>
-                    <li><input type="checkbox" id="instruction9-metric"> <label for="instruction9-metric">Spread the meat and vegetable mixture in an even layer in a large baking dish.</label></li>
-                    <li><input type="checkbox" id="instruction10-metric"> <label for="instruction10-metric">Top with the mashed potatoes, spreading them out evenly.</label></li>
-                    <li><input type="checkbox" id="instruction11-metric"> <label for="instruction11-metric">Sprinkle 200g grated cheese over the mashed potatoes.</label></li>
-                    <li><input type="checkbox" id="instruction12-metric"> <label for="instruction12-metric">Bake in the preheated oven for 20-25 minutes, or until the top is golden brown and the filling is bubbling.</label></li>
-                    <li><input type="checkbox" id="instruction13-metric"> <label for="instruction13-metric">Allow to cool slightly before serving.</label></li>
-                </ul>
-            </div>
-
-            <div class="imperial-instructions" style="display: none;">
-                <ul>
-                    <li><input type="checkbox" id="instruction1-imperial"> <label for="instruction1-imperial">Peel the potatoes and cut them into chunks.</label></li>
-                    <li><input type="checkbox" id="instruction2-imperial"> <label for="instruction2-imperial">Fill a large saucepan with water, add a pinch of salt, and bring it to a boil. Add the potatoes and cook until they are tender (about 20 minutes).</label></li>
-                    <li><input type="checkbox" id="instruction3-imperial"> <label for="instruction3-imperial">While the potatoes are cooking, heat a large skillet over medium heat. Add 2.2lb ground beef and cook until browned. Drain any excess fat.</label></li>
-                    <li><input type="checkbox" id="instruction4-imperial"> <label for="instruction4-imperial">Add the chopped onions and garlic to the skillet and cook until they are soft and translucent.</label></li>
-                    <li><input type="checkbox" id="instruction5-imperial"> <label for="instruction5-imperial">Stir in 7oz carrots and 10oz mushrooms, and cook for a few minutes until they begin to soften.</label></li>
-                    <li><input type="checkbox" id="instruction6-imperial"> <label for="instruction6-imperial">Add 2 tablespoons tomato purée, 2 tablespoons Worcestershire sauce, 1 teaspoon thyme, and 1 teaspoon dried oregano. Pour in 1 small glass of red wine if using. Allow the mixture to simmer for about 10 minutes.</label></li>
-                    <li><input type="checkbox" id="instruction7-imperial"> <label for="instruction7-imperial">Mash the cooked potatoes with 1.7oz butter and 6 fl oz milk until smooth. Season with salt and pepper to taste.</label></li>
-                    <li><input type="checkbox" id="instruction8-imperial"> <label for="instruction8-imperial">Preheat your oven to 400°F (200°C).</label></li>
-                    <li><input type="checkbox" id="instruction9-imperial"> <label for="instruction9-imperial">Spread the meat and vegetable mixture in an even layer in a large baking dish.</label></li>
-                    <li><input type="checkbox" id="instruction10-imperial"> <label for="instruction10-imperial">Top with the mashed potatoes, spreading them out evenly.</label></li>
-                    <li><input type="checkbox" id="instruction11-imperial"> <label for="instruction11-imperial">Sprinkle 7oz grated cheese over the mashed potatoes.</label></li>
-                    <li><input type="checkbox" id="instruction12-imperial"> <label for="instruction12-imperial">Bake in the preheated oven for 20-25 minutes, or until the top is golden brown and the filling is bubbling.</label></li>
-                    <li><input type="checkbox" id="instruction13-imperial"> <label for="instruction13-imperial">Allow to cool slightly before serving.</label></li>
-                </ul>
-            </div>
-        </section>
-    </div>
-    <script src="scripts.js"></script>
+    </section>
+    <section class="ingredients">
+        <h2>Ingredients</h2>
+        <div class="btn">
+            <button class="w3-button w3-blue metric-btn" onclick="showMetric()">Metric</button>
+            <button class="w3-button w3-blue imperial-btn" onclick="showImperial()">Imperial</button>
+        </div>
+        <ul>
+            <!-- Metric Ingredients -->
+            <li class="metric"><input type="checkbox" id="ingredient1-metric"> <label for="ingredient1-metric">1kg ground beef</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient2-metric"> <label for="ingredient2-metric">200g carrots</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient3-metric"> <label for="ingredient3-metric">300g mushrooms</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient4-metric"> <label for="ingredient4-metric">50g butter</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient5-metric"> <label for="ingredient5-metric">175ml milk</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient6-metric"> <label for="ingredient6-metric">200g grated cheese</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient7-metric"> <label for="ingredient7-metric">2 tablespoons tomato purée</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient8-metric"> <label for="ingredient8-metric">2 tablespoons Worcestershire sauce</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient9-metric"> <label for="ingredient9-metric">1.5 teaspoons thyme</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient10-metric"> <label for="ingredient10-metric">2 teaspoons dried oregano</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient11-metric"> <label for="ingredient11-metric">1 small glass of red wine (optional)</label></li>
+            
+            <!-- Imperial Ingredients -->
+            <li class="imperial" style="display: none;"><input type="checkbox" id="ingredient1-imperial"> <label for="ingredient1-imperial">2.2lb ground beef</label></li>
+            <li class="imperial" style="display: none;"><input type="checkbox" id="ingredient2-imperial"> <label for="ingredient2-imperial">7oz carrots</label></li>
+            <li class="imperial" style="display: none;"><input type="checkbox" id="ingredient3-imperial"> <label for="ingredient3-imperial">10oz mushrooms</label></li>
+            <li class="imperial" style="display: none;"><input type="checkbox" id="ingredient4-imperial"> <label for="ingredient4-imperial">1.7oz butter</label></li>
+            <li class="imperial" style="display: none;"><input type="checkbox" id="ingredient5-imperial"> <label for="ingredient5-imperial">6 fl oz milk</label></li>
+            <li class="imperial" style="display: none;"><input type="checkbox" id="ingredient6-imperial"> <label for="ingredient6-imperial">7oz grated cheese</label></li>
+            <li class="imperial" style="display: none;"><input type="checkbox" id="ingredient7-imperial"> <label for="ingredient7-imperial">2 tablespoons tomato purée</label></li>
+            <li class="imperial" style="display: none;"><input type="checkbox" id="ingredient8-imperial"> <label for="ingredient8-imperial">2 tablespoons Worcestershire sauce</label></li>
+            <li class="imperial" style="display: none;"><input type="checkbox" id="ingredient9-imperial"> <label for="ingredient9-imperial">1.5 teaspoons thyme</label></li>
+            <li class="imperial" style="display: none;"><input type="checkbox" id="ingredient10-imperial"> <label for="ingredient10-imperial">2 teaspoons dried oregano</label></li>
+            <li class="imperial" style="display: none;"><input type="checkbox" id="ingredient11-imperial"> <label for="ingredient11-imperial">1 small glass of red wine (optional)</label></li>
+        </ul>
+    </section>
+    <section class="instructions">
+        <h2>Instructions</h2>
+        <!-- Metric Instructions -->
+        <div class="metric-instructions">
+            <ul>
+                <li><input type="checkbox" id="instruction1-metric"> <label for="instruction1-metric">Peel the potatoes and cut them into chunks.</label></li>
+                <li><input type="checkbox" id="instruction2-metric"> <label for="instruction2-metric">Fill a large saucepan with water, add a pinch of salt, and bring it to a boil. Add the potatoes and cook until they are tender (about 20 minutes).</label></li>
+                <li><input type="checkbox" id="instruction3-metric"> <label for="instruction3-metric">While the potatoes are cooking, heat a large skillet over medium heat. Add 1kg ground beef and cook until browned. Drain any excess fat.</label></li>
+                <li><input type="checkbox" id="instruction4-metric"> <label for="instruction4-metric">Add the chopped onions and garlic to the skillet and cook until they are soft and translucent.</label></li>
+                <li><input type="checkbox" id="instruction5-metric"> <label for="instruction5-metric">Stir in 200g carrots and 300g mushrooms, and cook for a few minutes until they begin to soften.</label></li>
+                <li><input type="checkbox" id="instruction6-metric"> <label for="instruction6-metric">Add 2 tablespoons tomato purée, 2 tablespoons Worcestershire sauce, 1.5 teaspoons thyme, and 2 teaspoons dried oregano. Pour in 1 small glass of red wine if using. Allow the mixture to simmer for about 10 minutes.</label></li>
+                <li><input type="checkbox" id="instruction7-metric"> <label for="instruction7-metric">Preheat your oven to 190°C.</label></li>
+                <li><input type="checkbox" id="instruction8-metric"> <label for="instruction8-metric">Drain and mash the cooked potatoes with 50g butter and 175ml milk. Season with salt and pepper to taste.</label></li>
+                <li><input type="checkbox" id="instruction9-metric"> <label for="instruction9-metric">Transfer the beef and vegetable mixture to a large baking dish. Spread the mashed potatoes over the top.</label></li>
+                <li><input type="checkbox" id="instruction9-metric"> <label for="instruction9-metric">Transfer the beef and vegetable mixture to a large baking dish. Spread the mashed potatoes over the top.</label></li>
+                <li><input type="checkbox" id="instruction10-metric"> <label for="instruction10-metric">Sprinkle 200g grated cheese over the mashed potatoes.</label></li>
+                <li><input type="checkbox" id="instruction11-metric"> <label for="instruction11-metric">Bake in the preheated oven for 20-25 minutes, until the top is golden brown and the filling is bubbling.</label></li>
+                <li><input type="checkbox" id="instruction12-metric"> <label for="instruction12-metric">Let the cottage pie cool for a few minutes before serving. Enjoy!</label></li>
+            </ul>
+        </div>
+        <!-- Imperial Instructions -->
+        <div class="imperial-instructions" style="display: none;">
+            <ul>
+                <li><input type="checkbox" id="instruction1-imperial"> <label for="instruction1-imperial">Peel the potatoes and cut them into chunks.</label></li>
+                <li><input type="checkbox" id="instruction2-imperial"> <label for="instruction2-imperial">Fill a large saucepan with water, add a pinch of salt, and bring it to a boil. Add the potatoes and cook until they are tender (about 20 minutes).</label></li>
+                <li><input type="checkbox" id="instruction3-imperial"> <label for="instruction3-imperial">While the potatoes are cooking, heat a large skillet over medium heat. Add 2.2lb ground beef and cook until browned. Drain any excess fat.</label></li>
+                <li><input type="checkbox" id="instruction4-imperial"> <label for="instruction4-imperial">Add the chopped onions and garlic to the skillet and cook until they are soft and translucent.</label></li>
+                <li><input type="checkbox" id="instruction5-imperial"> <label for="instruction5-imperial">Stir in 7oz carrots and 10oz mushrooms, and cook for a few minutes until they begin to soften.</label></li>
+                <li><input type="checkbox" id="instruction6-imperial"> <label for="instruction6-imperial">Add 2 tablespoons tomato purée, 2 tablespoons Worcestershire sauce, 1.5 teaspoons thyme, and 2 teaspoons dried oregano. Pour in 1 small glass of red wine if using. Allow the mixture to simmer for about 10 minutes.</label></li>
+                <li><input type="checkbox" id="instruction7-imperial"> <label for="instruction7-imperial">Preheat your oven to 375°F.</label></li>
+                <li><input type="checkbox" id="instruction8-imperial"> <label for="instruction8-imperial">Drain and mash the cooked potatoes with 1.7oz butter and 6 fl oz milk. Season with salt and pepper to taste.</label></li>
+                <li><input type="checkbox" id="instruction9-imperial"> <label for="instruction9-imperial">Transfer the beef and vegetable mixture to a large baking dish. Spread the mashed potatoes over the top.</label></li>
+                <li><input type="checkbox" id="instruction10-imperial"> <label for="instruction10-imperial">Sprinkle 7oz grated cheese over the mashed potatoes.</label></li>
+                <li><input type="checkbox" id="instruction11-imperial"> <label for="instruction11-imperial">Bake in the preheated oven for 20-25 minutes, until the top is golden brown and the filling is bubbling.</label></li>
+                <li><input type="checkbox" id="instruction12-imperial"> <label for="instruction12-imperial">Let the cottage pie cool for a few minutes before serving. Enjoy!</label></li>
+            </ul>
+        </div>
+    </section>
+</main>
+<script src="script.js"></script>
 </body>
 </html>
