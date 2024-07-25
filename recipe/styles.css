@@ -166,11 +166,15 @@ footer {
     height: 20px; 
 }
 
+.ingredients, .instructions {
+        margin: auto;
+        float: left;
+}
+
 @media only screen and (min-width: 768px) {
     .ingredients, .instructions {
         display: flex;
         flex: 1 1 40%;
-        margin-right: 20px;
     }
 }
 
