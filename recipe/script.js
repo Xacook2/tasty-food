@@ -2,12 +2,16 @@
 function showMetric() {
     document.querySelectorAll('.metric').forEach(el => el.style.display = 'list-item');
     document.querySelectorAll('.imperial').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('.metric-instructions').forEach(el => el.style.display = 'block');
+    document.querySelectorAll('.imperial-instructions').forEach(el => el.style.display = 'none');
 }
 
 // Function to show ingredients in imperial units
 function showImperial() {
     document.querySelectorAll('.imperial').forEach(el => el.style.display = 'list-item');
     document.querySelectorAll('.metric').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('.imperial-instructions').forEach(el => el.style.display = 'block');
+    document.querySelectorAll('.metric-instructions').forEach(el => el.style.display = 'none');
 }
 
 // Add event listeners to checkboxes for ingredients and instructions
@@ -31,4 +35,9 @@ document.querySelectorAll('.instructions input[type="checkbox"]').forEach(checkb
             label.classList.remove('crossed-out');
         }
     });
+});
+
+// Initial load - show metric by default
+document.addEventListener('DOMContentLoaded', (event) => {
+    showMetric();
 });
