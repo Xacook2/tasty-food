@@ -11,6 +11,10 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+ul { 
+    list-style: none;
+}
+
 header h1 {
     text-align: center;
     color: #333;
@@ -29,7 +33,6 @@ header h1 {
 }
 
 .recipe-info {
-    list-style: none;
     padding: 0;
     display: flex;
     justify-content: space-around;
@@ -40,7 +43,6 @@ header h1 {
 .recipe-info li {
     background: none;
     padding: 10px;
-    border-radius: 8px;
     font-weight: bold;
 }
 
@@ -55,11 +57,6 @@ header h1 {
 
 .nutritional-info h2 {
     margin-bottom: 10px;
-}
-
-.nutritional-info ul {
-    list-style: none;
-    padding: 0;
 }
 
 .nutritional-info li {
