@@ -164,7 +164,6 @@ footer {
     justify-content: left;
     gap: 10px;
     height: 40px; 
-    position: absolute;
 }
 
 .ingredients, .instructions {
