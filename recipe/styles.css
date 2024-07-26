@@ -163,7 +163,7 @@ footer {
     display: flex;
     justify-content: left;
     gap: 10px;
-    height: 20px; 
+    height: 50px; 
 }
 
 .ingredients, .instructions {
