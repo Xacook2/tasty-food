@@ -170,7 +170,7 @@ footer {
 }
 
 .ingredients, .instructions {
-    display: block;
+    display: inline;
     float: left;
         
 }
