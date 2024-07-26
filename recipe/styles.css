@@ -165,6 +165,8 @@ footer {
     clear: left; 
     gap: 10px;
     height: 40px; 
+    position: relitive;
+    left: 20px;
 }
 
 .ingredients, .instructions {
