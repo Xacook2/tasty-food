@@ -170,7 +170,9 @@ footer {
 }
 
 .ingredients, .instructions {
-        float: left;
+    display: block;
+    float: left;
+        
 }
 
 @media only screen and (min-width: 768px) {
