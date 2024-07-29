@@ -117,7 +117,7 @@ header {
 }
 
 .nutritional-info h2 {
-    clear: left;
+    justify-content: center;
 }
 
 .print-button {
