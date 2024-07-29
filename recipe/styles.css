@@ -99,7 +99,6 @@ header {
     display: inline-flex;
     align-items: center;
     max-height: 50px;
-    clear: left;
     justify-content: center;
     padding: 10px;
     border: 1px solid black;
