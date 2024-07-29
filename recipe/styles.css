@@ -147,7 +147,7 @@ footer {
 
 .crossed-out {
     text-decoration: line-through;
-    color: #888;
+    color: black;
 }
 
 .metric, .imperial {
