@@ -154,7 +154,7 @@ footer {
     display: list-item;
 }
 
-.ingredients input[type="checkbox"] {
+.ingredients, instructions input[type="checkbox"] {
     margin-right: 10px;
     vertical-align: middle;
 }
