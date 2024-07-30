@@ -96,7 +96,7 @@ header {
     padding: 10px;
     border: 1px solid black;
     background-color: rgb(193, 225, 193);
-    flex: 1;
+    flex: 1 1 45%;
     min-width: 120px;
     max-width: 200px;
     text-align: center;
