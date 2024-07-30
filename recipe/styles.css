@@ -153,6 +153,10 @@ footer {
     vertical-align: middle;
 }
 
+.ingredients, .instructions {
+    margin: auto;
+}
+
 .btn {
     display: flex;
     justify-content: left;
