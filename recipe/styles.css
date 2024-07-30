@@ -109,7 +109,7 @@ header {
     display: block;
 }
 
-h2 {
+.recipe-details h2 {
     text-align: center;
 }
 
