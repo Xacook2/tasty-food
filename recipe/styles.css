@@ -91,14 +91,13 @@ header {
 .nutritional-info li {
     display: inline-flex;
     align-items: center;
-    max-height: 50px;
+    max-height: 75px;
     justify-content: center;
     padding: 10px;
     border: 1px solid black;
     background-color: rgb(193, 225, 193);
     flex: 1 1 45%;
-    min-width: 120px;
-    max-width: 200px;
+    max-width: 50px;
     text-align: center;
     box-sizing: border-box;
     border-radius: 5px;
