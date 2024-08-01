@@ -161,7 +161,7 @@ footer {
     margin-bottom: 8px;
 }
 
-.ingredients, .instructions label {
+.ingredients .instructions label {
     display: flex;
     align-items: start;
 }
