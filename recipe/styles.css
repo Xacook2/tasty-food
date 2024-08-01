@@ -153,7 +153,11 @@ footer {
 }
 
 .ingredients, .instructions {
-    margin: auto;
+    margin: auto;  
+}
+
+ingredients li, .instructions li {
+.imargin-bottom: 8px;
 }
 
 .btn {
