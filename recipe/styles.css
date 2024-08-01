@@ -160,6 +160,11 @@ ingredients li, .instructions li {
 .imargin-bottom: 8px;
 }
 
+.ingredients, .instructions label {
+		display: flex;
+		align-items: start; /* Align checkbox and text vertically */
+	}
+
 .btn {
     display: flex;
     justify-content: left;
