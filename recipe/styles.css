@@ -154,6 +154,7 @@ footer {
 
 .ingredients, .instructions {
     margin: auto;  
+    padding: 0px;
 }
 
 ingredients li, .instructions li {
@@ -161,9 +162,9 @@ ingredients li, .instructions li {
 }
 
 .ingredients, .instructions label {
-		display: flex;
-		align-items: start; /* Align checkbox and text vertically */
-	}
+    display: flex;
+    align-items: start;
+}
 
 .btn {
     display: flex;
