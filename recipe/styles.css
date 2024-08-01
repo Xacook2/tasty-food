@@ -157,8 +157,8 @@ footer {
     padding: 0px;
 }
 
-ingredients li, .instructions li {
-.imargin-bottom: 8px;
+.ingredients li, .instructions li {
+    margin-bottom: 8px;
 }
 
 .ingredients, .instructions label {
