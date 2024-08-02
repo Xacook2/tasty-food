@@ -154,12 +154,11 @@ footer {
 
 .ingredients, .instructions {
     margin: auto;  
-    padding: 0px;
+    padding: 0px !important;
 }
 
 .ingredients li, .instructions li {
     margin-bottom: 8px;
-    padding: 0px;
 }
 
 .ingredients .instructions label {
