@@ -152,7 +152,7 @@ footer {
     vertical-align: middle;
 }
 
-.ingredients, .instructions {
+.ingredients .instructions {
     margin: auto;  
     padding: 0px !important;
     margin-top: 10px;
