@@ -155,6 +155,7 @@ footer {
 .ingredients, .instructions {
     margin: auto;  
     padding: 0px !important;
+    margin-top: 10px;
 }
 
 .ingredients li, .instructions li {
