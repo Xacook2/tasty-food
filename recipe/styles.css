@@ -17,6 +17,8 @@ body {
 
 ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 header {
@@ -77,7 +79,6 @@ header {
 .person:before {
     background-image: url('person-icon.svg');
 }
-
 
 .nutritional-info ul {
     padding: 0;
@@ -149,17 +150,19 @@ footer {
 
 .ingredients, .instructions input[type="checkbox"] {
     margin-right: 10px;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 .ingredients .instructions {
     margin: auto;  
-    padding: 0px !important;
+    padding: 0 !important;
     margin-top: 10px;
 }
 
 .ingredients li, .instructions li {
     margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
 }
 
 .ingredients .instructions label {
@@ -173,10 +176,6 @@ footer {
     clear: left; 
     gap: 10px;
     height: 40px; 
-    position: relitive;
+    position: relative;
     left: 20px;
 }
-
-
-
-
