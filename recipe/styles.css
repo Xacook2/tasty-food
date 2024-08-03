@@ -156,7 +156,7 @@ footer {
 .ingredients, .instructions {
     margin: auto;  
     padding: 0 !important;
-    margin-top: 10px;
+    margin: 5px;
 }
 
 .ingredients li, .instructions li {
@@ -175,7 +175,5 @@ footer {
     justify-content: left;
     clear: left; 
     gap: 10px;
-    height: 40px; 
-    position: relative;
-    left: 20px;
+    height: 40px;  
 }
