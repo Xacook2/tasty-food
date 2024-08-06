@@ -173,7 +173,7 @@ footer {
 .btn {
     display: flex;
     justify-content: left;
-    margin-top: 15px;
+    margin-bottom: 15px;
     gap: 10px;
     height: 40px;  
 }
