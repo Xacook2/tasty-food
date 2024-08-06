@@ -144,8 +144,12 @@ footer {
     color: black;
 }
 
-.metric, .imperial {
+.metric {
     display: list-item;
+}
+
+.imperial {
+    display: none;
 }
 
 .ingredients input[type="checkbox"], .instructions input[type="checkbox"] {
