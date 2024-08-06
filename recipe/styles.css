@@ -164,15 +164,19 @@ footer {
 }
 
 .ingredients li, .instructions li {
-    margin-bottom: 8px;
     display: flex;
-    align-items: flex-start;
+    align-items: center; 
+    margin-bottom: 8px;
 }
 
 .ingredients label, .instructions label {
-    display: flex;
-    align-items: start;
+    margin-left: 5px; 
 }
+
+.ingredients input[type="checkbox"], .instructions input[type="checkbox"] {
+    margin: 5px; 
+}
+
 
 .btn {
     display: flex;
