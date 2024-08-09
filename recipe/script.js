@@ -1,11 +1,13 @@
 // Function to show ingredients in metric units
 function showMetric() {
+    console.log("Metric button clicked"); // Log to check if this function is called
     document.querySelectorAll('.metric').forEach(el => el.style.display = 'list-item');
     document.querySelectorAll('.imperial').forEach(el => el.style.display = 'none');
 }
 
 // Function to show ingredients in imperial units
 function showImperial() {
+    console.log("Imperial button clicked"); // Log to check if this function is called
     document.querySelectorAll('.imperial').forEach(el => el.style.display = 'list-item');
     document.querySelectorAll('.metric').forEach(el => el.style.display = 'none');
 }
