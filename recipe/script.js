@@ -12,6 +12,11 @@ function showImperial() {
     document.querySelectorAll('.metric').forEach(el => el.style.display = 'none');
 }
 
+// Ensure the correct units are shown on page load
+document.addEventListener('DOMContentLoaded', function () {
+    showMetric();  // Default to metric units on page load
+});
+
 // Add event listeners to checkboxes for ingredients and instructions
 document.querySelectorAll('.ingredients input[type="checkbox"]').forEach(checkbox => {
     checkbox.addEventListener('change', function() {
