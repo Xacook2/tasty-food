@@ -154,7 +154,7 @@ footer {
 
 .ingredients input[type="checkbox"], .instructions input[type="checkbox"] {
     margin: 5px;
-    vertical-align: center;
+    vertical-align: top;
 }
 
 .ingredients, .instructions {
