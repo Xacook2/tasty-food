@@ -156,19 +156,27 @@ footer {
     margin: 5px;
     vertical-align: top;
 }
+.ingredients li, .instructions li {
+    display: flex;
+    align-items: flex-start; /* Aligns the checkbox and the text at the top */
+    gap: 10px; /* Space between checkbox and text */
+    margin-bottom: 6px;
+}
 
+.ingredients label, .instructions label {
+    flex: 1; /* Allows the label to take up the remaining space */
+    white-space: normal; /* Allows text to wrap to the next line if necessary */
+    margin-left: 5px;
+}
+
+.ingredients input[type="checkbox"], .instructions input[type="checkbox"] {
+    flex-shrink: 0; /* Prevents the checkbox from shrinking */
+    margin-top: 3px; /* Optional: Adjusts the alignment of the checkbox */
+}
 .ingredients, .instructions {
     margin: auto;  
     padding: 0 !important;
     margin-top: 10px;
-}
-
-.ingredients li, .instructions li {
-    margin-bottom: 8px;
-}
-
-.ingredients label, .instructions label {
-    margin-left: 5px; 
 }
 
 .ingredients input[type="checkbox"], .instructions input[type="checkbox"] {
