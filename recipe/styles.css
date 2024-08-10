@@ -165,7 +165,7 @@ footer {
 
 .ingredients li, .instructions li {
     display: flex;
-    align-items: top; 
+    align-items: flex-star; 
     margin-bottom: 8px;
 }
 
