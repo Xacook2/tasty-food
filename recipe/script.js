@@ -12,7 +12,7 @@ function showImperial() {
     document.querySelectorAll('.metric').forEach(el => el.style.display = 'none');
 }
 
-// Ensure the correct units are shown on page load
+// Automatically call the showMetric function when the page loads
 document.addEventListener('DOMContentLoaded', function () {
     showMetric();  // Default to metric units on page load
 });
