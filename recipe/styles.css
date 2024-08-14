@@ -1,173 +1,103 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    width: 80%;
-    margin: 20px auto;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: rgb(252, 250, 242);
-    border: 1px solid black;
-    border-radius: 10px;
-    overflow: hidden;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-header, footer {
+header {
     text-align: center;
     margin-bottom: 20px;
-    width: 100%;
 }
 
 .recipe-image {
-    display: block;
-    margin: 0 auto;
-    width: 90%;
     max-width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
-.recipe-info, .nutritional-info ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+.recipe-details,
+.rating,
+.ingredients,
+.instructions {
+    margin-bottom: 20px;
+}
+
+.recipe-info {
+    list-style: none;
     padding: 0;
-    margin: 10px auto;
-    width: 90%;
 }
 
-.recipe-info li, .nutritional-info li {
-    flex: 1 1 150px; 
-    margin: 5px 10px;
-    padding: 10px;
-    text-align: center;
-    box-sizing: border-box;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.recipe-info li {
+    font-size: 16px;
 }
 
-.recipe-info li:before {
-    display: inline-block;
-    content: '';
-    margin-right: 5px;
-    width: 20px;
-    height: 20px;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.serves:before {
-    background-image: url('serving-icon.svg');
-}
-
-.time:before {
-    background-image: url('clock-icon.svg');
+.nutritional-info ul {
+    list-style: none;
+    padding: 0;
 }
 
 .nutritional-info li {
-    max-height: 70px;
-    border: 1px solid black;
-    background-color: rgb(193, 225, 193);
-    max-width: 70px;
-    border-radius: 5px;
-    overflow-wrap: break-word;
+    font-size: 14px;
 }
 
-.recipe-details h2, .print-button {
-    text-align: center;
-    margin-top: 20px;
-    width: 100%;
+.stars {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
 }
 
-.print-button button {
+.star:hover,
+.star.selected {
+    color: gold;
+}
+
+#submit-rating {
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #28a745;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
-.print-button button:hover {
-    background-color: #0056b3;
+#submit-rating:hover {
+    background-color: #218838;
 }
 
-.crossed-out {
-    text-decoration: line-through;
-    color: black;
+#rating-counter {
+    margin-top: 10px;
+    font-size: 16px;
 }
 
-.metric {
-    display: list-item;
-}
-
-.imperial {
-    display: none;
-}
-
-.ingredients, .instructions {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin: 10px auto 0;
-    padding: 0;
-}
-
-.ingredients li, .instructions li {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.ingredients label, .instructions label {
-    flex: 1;
-    white-space: normal;
-    margin-left: 5px;
-}
-
-.ingredients input[type="checkbox"], .instructions input[type="checkbox"] {
-    flex-shrink: 0;
-    margin-top: 3px;
-}
-
-.btn {
-    display: flex;
-    justify-content: left;
-    gap: 10px;
-    height: 40px;  
+.ingredients .btn {
     margin-bottom: 15px;
 }
 
-/* Rating Section Styles */
-.rating {
-    text-align: center;
-    margin: 20px 0;
+.ingredients ul {
+    list-style: none;
+    padding: 0;
 }
 
-.stars {
-    display: inline-block;
-    font-size: 2rem;
-    cursor: pointer;
+.ingredients li {
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
-.stars .star {
-    color: #ccc;
-    transition: color 0.3s ease;
+.instructions ul {
+    list-style: none;
+    padding: 0;
 }
 
-.stars .star:hover,
-.stars .star.selected {
-    color: #ffcc00;
+.instructions li {
+    font-size: 16px;
+    margin-bottom: 10px;
 }
