@@ -75,10 +75,6 @@ header, footer {
     background-image: url('clock-icon.svg');
 }
 
-.person:before {
-    background-image: url('person-icon.svg');
-}
-
 .nutritional-info li {
     max-height: 70px;
     border: 1px solid black;
@@ -152,4 +148,26 @@ header, footer {
     gap: 10px;
     height: 40px;  
     margin-bottom: 15px;
+}
+
+/* Rating Section Styles */
+.rating {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.stars {
+    display: inline-block;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.stars .star {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.stars .star:hover,
+.stars .star.selected {
+    color: #ffcc00;
 }
