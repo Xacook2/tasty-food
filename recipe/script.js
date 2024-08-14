@@ -1,13 +1,13 @@
 // Function to show ingredients in metric units
 function showMetric() {
-    console.log("Metric button clicked"); // Log to check if this function is called
+    console.log("Metric button clicked");
     document.querySelectorAll('.metric').forEach(el => el.style.display = 'list-item');
     document.querySelectorAll('.imperial').forEach(el => el.style.display = 'none');
 }
 
 // Function to show ingredients in imperial units
 function showImperial() {
-    console.log("Imperial button clicked"); // Log to check if this function is called
+    console.log("Imperial button clicked");
     document.querySelectorAll('.imperial').forEach(el => el.style.display = 'list-item');
     document.querySelectorAll('.metric').forEach(el => el.style.display = 'none');
 }
@@ -39,3 +39,22 @@ document.querySelectorAll('.instructions input[type="checkbox"]').forEach(checkb
         }
     });
 });
+
+// Add the rating functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const stars = document.querySelectorAll('.stars .star');
+    const ratingValue = document.getElementById('rating-value');
+
+    stars.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            ratingValue.textContent = `Rating: ${value} out of 5`;
+            
+            stars.forEach(s => s.classList.remove('selected'));
+            this.classList.add('selected');
+            this.nextElementSibling?.classList.add('selected');
+            this.previousElementSibling?.classList.add('selected');
+        });
+    });
+});
+
