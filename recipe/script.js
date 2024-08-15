@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
    // let hasVoted = localStorage.getItem('hasVoted');
 
     // Check if the user has already voted
-   /* if (hasVoted) {
+    if (hasVoted) {
         submitRatingBtn.disabled = true;
         alert('You have already voted.');
         // You may want to display the previous rating here
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
             star.addEventListener('mouseout', function () {
                 updateStars(currentRating);
             });
-        });*/
+        });
 
         submitRatingBtn.addEventListener('click', function () {
             if (currentRating > 0) {
