@@ -1,37 +1,42 @@
-// Toggle between Metric and Imperial ingredients
+// Function to show ingredients in metric units
 function showMetric() {
-    document.getElementById('metric-ingredients').style.display = 'block';
-    document.getElementById('imperial-ingredients').style.display = 'none';
+    console.log("Metric button clicked"); // Log to check if this function is called
+    document.querySelectorAll('.metric').forEach(el => el.style.display = 'list-item');
+    document.querySelectorAll('.imperial').forEach(el => el.style.display = 'none');
 }
 
+// Function to show ingredients in imperial units
 function showImperial() {
-    document.getElementById('metric-ingredients').style.display = 'none';
-    document.getElementById('imperial-ingredients').style.display = 'block';
+    console.log("Imperial button clicked"); // Log to check if this function is called
+    document.querySelectorAll('.imperial').forEach(el => el.style.display = 'list-item');
+    document.querySelectorAll('.metric').forEach(el => el.style.display = 'none');
 }
 
-// Star rating logic
-const stars = document.querySelectorAll('#rating-stars .star');
-const ratingCounter = document.getElementById('rating-counter');
-const ratingSummary = {
-    totalReviews: 0,
-    averageRating: 0
-};
+// Automatically call the showMetric function when the page loads
+document.addEventListener('DOMContentLoaded', function () {
+    showMetric();  // Default to metric units on page load
+});
 
-stars.forEach(star => {
-    star.addEventListener('click', function () {
-        const rating = this.getAttribute('data-value');
-        stars.forEach(s => s.classList.remove('selected'));
-        this.classList.add('selected');
-        ratingCounter.textContent = `Your Rating: ${rating} Stars`;
-
-        document.getElementById('submit-rating').onclick = () => submitRating(rating);
+// Add event listeners to checkboxes for ingredients and instructions
+document.querySelectorAll('.ingredients input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+        const label = this.nextElementSibling;
+        if (checkbox.checked) {
+            label.classList.add('crossed-out');
+        } else {
+            label.classList.remove('crossed-out');
+        }
     });
 });
 
-function submitRating(rating) {
-    ratingSummary.totalReviews++;
-    ratingSummary.averageRating = ((ratingSummary.averageRating * (ratingSummary.totalReviews - 1)) + parseInt(rating)) / ratingSummary.totalReviews;
+document.querySelectorAll('.instructions input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+        const label = this.nextElementSibling;
+        if (checkbox.checked) {
+            label.classList.add('crossed-out');
+        } else {
+            label.classList.remove('crossed-out');
+        }
+    });
+});
 
-    document.getElementById('average-rating').textContent = `Average Rating: ${ratingSummary.averageRating.toFixed(1)}`;
-    document.getElementById('total-reviews').textContent = `Total Reviews: ${ratingSummary.totalReviews}`;
-}
