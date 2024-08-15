@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-/*
+
    function updateRatingSummary(newRating) {
         // Get stored values from the server (this part is conceptual)
         // This should be replaced by an AJAX call to get the current rating data from the server
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const averageRating = (totalRatings / numberOfRatings).toFixed(1);
         ratingSummary.textContent = `Average Rating: ${averageRating} / 5`;
         ratingCounter.textContent = `${numberOfRatings} ratings submitted`;
-    }*/
+    }
 });
 
 // Add event listeners to checkboxes for ingredients and instructions
