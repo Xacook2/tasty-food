@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
         submitRatingBtn.addEventListener('click', function () {
             if (currentRating > 0) {
                 // Save vote locally
-                localStorage.setItem('hasVoted', true);
+                // localStorage.setItem('hasVoted', true);
 
                 // Disable further voting
                 submitRatingBtn.disabled = true;
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    function updateRatingSummary(newRating) {
+   /* function updateRatingSummary(newRating) {
         // Get stored values from the server (this part is conceptual)
         // This should be replaced by an AJAX call to get the current rating data from the server
         // Example server response
@@ -131,3 +131,4 @@ document.addEventListener('DOMContentLoaded', function () {
         ratingCounter.textContent = `${numberOfRatings} ratings submitted`;
     }
 });
+*/
