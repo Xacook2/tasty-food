@@ -153,3 +153,28 @@ header, footer {
     height: 40px;  
     margin-bottom: 15px;
 }
+
+/*Review Code below*/
+
+.stars {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.star {
+    font-size: 30px;
+    color: gray;
+}
+
+.star.gold {
+    color: gold;
+}
+
+.rating-container {
+    text-align: center;
+    margin: 50px;
+}
+
+#rating-summary, #rating-counter {
+    margin-top: 20px;
+}
