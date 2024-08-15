@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-   /* function updateRatingSummary(newRating) {
+   function updateRatingSummary(newRating) {
         // Get stored values from the server (this part is conceptual)
         // This should be replaced by an AJAX call to get the current rating data from the server
         // Example server response
@@ -131,4 +131,4 @@ document.addEventListener('DOMContentLoaded', function () {
         ratingCounter.textContent = `${numberOfRatings} ratings submitted`;
     }
 });
-*/
+
