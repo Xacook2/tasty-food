@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const ratingCounter = document.getElementById('rating-counter');
 
     let currentRating = 0;
-   // let hasVoted = localStorage.getItem('hasVoted');
+    let hasVoted = localStorage.getItem('hasVoted');
 
     // Check if the user has already voted
     if (hasVoted) {
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         submitRatingBtn.addEventListener('click', function () {
             if (currentRating > 0) {
                 // Save vote locally
-                // localStorage.setItem('hasVoted', true);
+                localStorage.setItem('hasVoted', true);
 
                 // Disable further voting
                 submitRatingBtn.disabled = true;
