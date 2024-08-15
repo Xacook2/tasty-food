@@ -1,188 +1,54 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px; 
+    margin: 20px auto;
+    max-width: 1000px;
 }
 
-header {
-    text-align: center;
+.recipe-details, .rating, .ingredients, .instructions {
     margin-bottom: 20px;
 }
 
 .recipe-image {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
-.recipe-details,
-.rating,
-.ingredients,
-.instructions {
-    margin-bottom: 20px;
+ul.recipe-info, ul.nutritional-info {
+    list-style: none;
+    padding: 0;
 }
 
-/* Basic styles for the recipe section */
-.recipe {
-    text-align: center;
-    margin: 20px;
+.recipe-info li, .nutritional-info li {
+    margin: 5px 0;
 }
 
-.recipe img {
-    width: 300px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-/* Styles for the rating section */
-.rating {
-    text-align: center;
-    margin: 30px 0;
-}
-
-.stars {
-    font-size: 36px;
-    color: #ccc;
+.rating .stars {
     cursor: pointer;
-    display: inline-block;
+    font-size: 24px;
+    color: grey;
 }
 
-.star {
-    transition: color 0.3s ease;
-}
-
-.star.gold,
-.star:hover,
-.star.selected {
+.rating .star:hover, .rating .star.selected {
     color: gold;
-}
-
-#submit-rating {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-}
-
-#submit-rating:hover {
-    background-color: #218838;
 }
 
 #rating-counter {
     margin-top: 10px;
-    font-size: 18px;
 }
 
-#rating-summary {
-    margin-top: 15px;
-    font-size: 20px;
+#submit-rating, #rating-summary {
+    margin-top: 10px;
 }
 
-.reviews {
-    margin-top: 30px;
-    text-align: left;
-    width: 50%;
-    margin: 0 auto;
-}
-
-.reviews ul {
+ul.ingredients, ul.instructions {
     list-style-type: none;
     padding: 0;
 }
 
-.reviews li {
-    background-color: #f4f4f4;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.reviews h2 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.recipe-info {
-    list-style: none;
-    padding: 0;
-}
-
-.recipe-info li {
-    font-size: 16px;
-}
-
-.nutritional-info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.nutritional-info li {
-    font-size: 14px;
-}
-
-.stars {
-    font-size: 24px;
-    color: #ccc;
-    cursor: pointer;
-}
-
-.star:hover,
-.star.selected {
-    color: gold;
-}
-
-#submit-rating {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-}
-
-#submit-rating:hover {
-    background-color: #218838;
-}
-
-#rating-counter {
-    margin-top: 10px;
-    font-size: 16px;
-}
-
-.ingredients .btn {
-    margin-bottom: 15px;
-}
-
-.ingredients ul {
-    list-style: none;
-    padding: 0;
-}
-
-.ingredients li {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.instructions ul {
-    list-style: none;
-    padding: 0;
-}
-
-.instructions li {
-    font-size: 16px;
-    margin-bottom: 10px;
+ul.ingredients li, ul.instructions li {
+    margin: 10px 0;
 }
