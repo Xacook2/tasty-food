@@ -15,32 +15,7 @@ function showImperial() {
 // Automatically call the showMetric function when the page loads
 document.addEventListener('DOMContentLoaded', function () {
     showMetric();  // Default to metric units on page load
-});
-
-// Add event listeners to checkboxes for ingredients and instructions
-document.querySelectorAll('.ingredients input[type="checkbox"]').forEach(checkbox => {
-    checkbox.addEventListener('change', function() {
-        const label = this.nextElementSibling;
-        if (checkbox.checked) {
-            label.classList.add('crossed-out');
-        } else {
-            label.classList.remove('crossed-out');
-        }
-    });
-});
-
-document.querySelectorAll('.instructions input[type="checkbox"]').forEach(checkbox => {
-    checkbox.addEventListener('change', function() {
-        const label = this.nextElementSibling;
-        if (checkbox.checked) {
-            label.classList.add('crossed-out');
-        } else {
-            label.classList.remove('crossed-out');
-        }
-    });
-});
-
-/*document.addEventListener('DOMContentLoaded', function () {
+    
     const stars = document.querySelectorAll('.stars .star');
     const submitRatingBtn = document.getElementById('submit-rating');
     const ratingSummary = document.getElementById('rating-summary');
@@ -131,4 +106,27 @@ document.querySelectorAll('.instructions input[type="checkbox"]').forEach(checkb
         ratingCounter.textContent = `${numberOfRatings} ratings submitted`;
     }
 });
-*/
+
+// Add event listeners to checkboxes for ingredients and instructions
+document.querySelectorAll('.ingredients input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+        const label = this.nextElementSibling;
+        if (checkbox.checked) {
+            label.classList.add('crossed-out');
+        } else {
+            label.classList.remove('crossed-out');
+        }
+    });
+});
+
+document.querySelectorAll('.instructions input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+        const label = this.nextElementSibling;
+        if (checkbox.checked) {
+            label.classList.add('crossed-out');
+        } else {
+            label.classList.remove('crossed-out');
+        }
+    });
+});
+
