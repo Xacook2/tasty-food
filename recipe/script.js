@@ -40,7 +40,7 @@ document.querySelectorAll('.instructions input[type="checkbox"]').forEach(checkb
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
+/*document.addEventListener('DOMContentLoaded', function () {
     const stars = document.querySelectorAll('.stars .star');
     const submitRatingBtn = document.getElementById('submit-rating');
     const ratingSummary = document.getElementById('rating-summary');
@@ -131,4 +131,4 @@ document.addEventListener('DOMContentLoaded', function () {
         ratingCounter.textContent = `${numberOfRatings} ratings submitted`;
     }
 });
-
+*/
