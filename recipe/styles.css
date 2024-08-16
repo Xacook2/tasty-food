@@ -36,7 +36,7 @@ header, footer {
     border-radius: 10px;
 }
 
-.recipe-info, .nutritional-info ul {
+.recipe-info ul, .nutritional-info ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: ;
