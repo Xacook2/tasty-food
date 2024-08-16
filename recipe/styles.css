@@ -39,11 +39,12 @@ header, footer {
 .recipe-info, .nutritional-info ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: ;
     gap: 10px;
     padding: 0;
     margin: 10px auto;
     width: 90%;
+    float: left;
 }
 
 .recipe-info li, .nutritional-info li {
