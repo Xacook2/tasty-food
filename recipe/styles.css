@@ -39,7 +39,7 @@ header, footer {
 .recipe-info, .nutritional-info ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     gap: 10px;
     padding: 0;
     margin: 10px auto;
