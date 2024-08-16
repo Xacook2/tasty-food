@@ -49,9 +49,9 @@ header, footer {
 
 .recipe-info li, .nutritional-info li {
     flex: 1 1 150px; 
-    margin: 0 auto;
+    margin-left: 10%;
     padding: 10px;
-    text-align: left;
+    text-align: center;
     box-sizing: border-box;
     display: inline-flex;
     align-items: left;
