@@ -36,14 +36,17 @@ header, footer {
     border-radius: 10px;
 }
 
-.recipe-info ul, .nutritional-info{
+.recipe-info ul, .nutritional-info {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 10px;
     padding: 0;
     margin: 10px auto;
     width: 90%;
+}
+
+.recipe-info ul { 
+    justify-content: left;
 }
 
 .recipe-info li, .nutritional-info li {
