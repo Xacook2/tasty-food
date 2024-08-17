@@ -52,8 +52,8 @@ header, footer {
     text-align: center;
     box-sizing: border-box;
     display: inline-flex;
-    align-items: left;
-    justify-content: left;
+    align-items: center;
+    justify-content: center;
 }
 
 .recipe-info li:before {
