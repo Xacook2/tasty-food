@@ -49,7 +49,7 @@ header, footer {
 
 .recipe-info li, .nutritional-info li {
     flex: 1 1 150px; 
-    margin-left: 30%;
+    margin-left: 20%;
     padding: 10px;
     text-align: center;
     box-sizing: border-box;
