@@ -91,7 +91,6 @@ header, footer {
 .recipe-details h2, .print-button {
     text-align: center;
     margin-top: 20px;
-    width: 100%;
 }
 
 .print-button button {
@@ -178,4 +177,10 @@ header, footer {
 
 #rating-summary, #rating-counter {
     margin-top: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
 }
