@@ -43,7 +43,7 @@ header, footer {
     padding: 0;
     margin: 10px auto;
     width: 90%;
-    justify-content: left;
+    justify-content: center;
 }
 
 .recipe-info li, .nutritional-info li {
