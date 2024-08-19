@@ -85,7 +85,7 @@ header, footer {
     width: 60px;
     border-radius: 5px;
     overflow-wrap: break-word;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .recipe-details h2, .print-button {
