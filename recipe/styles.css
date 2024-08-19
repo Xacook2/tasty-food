@@ -100,8 +100,8 @@ header, footer {
     background-color: #007BFF;
     color: white;
     border: none;
-    height: 60px;
-    width: 180px;
+    height: 45px;
+    width: 135px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
