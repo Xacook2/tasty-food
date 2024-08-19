@@ -12,8 +12,33 @@ function showImperial() {
     document.querySelectorAll('.metric').forEach(el => el.style.display = 'none');
 }
 
+// Mock function to simulate fetching rating data from a server
+async function fetchRatingData() {
+    // Simulate a delay for fetching data
+    await new Promise(resolve => setTimeout(resolve, 500));
+
+    // Mock data
+    return {
+        totalRatings: parseInt(localStorage.getItem('totalRatings')) || 0,
+        numberOfRatings: parseInt(localStorage.getItem('numberOfRatings')) || 0
+    };
+}
+
+// Mock function to simulate sending rating data to a server
+async function sendRatingToServer(rating) {
+    // Simulate a delay for sending data
+    await new Promise(resolve => setTimeout(resolve, 500));
+    // Update local storage to simulate storing data on the server
+    let totalRatings = parseInt(localStorage.getItem('totalRatings')) || 0;
+    let numberOfRatings = parseInt(localStorage.getItem('numberOfRatings')) || 0;
+    totalRatings += rating;
+    numberOfRatings++;
+    localStorage.setItem('totalRatings', totalRatings);
+    localStorage.setItem('numberOfRatings', numberOfRatings);
+}
+
 // Automatically call the showMetric function when the page loads
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
     showMetric();  // Default to metric units on page load
     
     const stars = document.querySelectorAll('.stars .star');
@@ -24,11 +49,19 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentRating = 0;
     let hasVoted = localStorage.getItem('hasVoted');
 
+    // Fetch and display rating data on page load
+    const ratingData = await fetchRatingData();
+    if (ratingData.numberOfRatings > 0) {
+        const averageRating = (ratingData.totalRatings / ratingData.numberOfRatings).toFixed(1);
+        ratingSummary.textContent = `Average Rating: ${averageRating} / 5`;
+        ratingCounter.textContent = `${ratingData.numberOfRatings} ratings submitted`;
+    }
+
     // Check if the user has already voted
     if (hasVoted) {
         submitRatingBtn.disabled = true;
-        alert('You have already voted.');
-        // You may want to display the previous rating here
+        // Update UI to reflect that voting is disabled
+        submitRatingBtn.textContent = 'You have already voted';
     } else {
         stars.forEach((star, index) => {
             star.addEventListener('click', function () {
@@ -45,24 +78,25 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
 
-        submitRatingBtn.addEventListener('click', function () {
+        submitRatingBtn.addEventListener('click', async function () {
             if (currentRating > 0) {
                 // Save vote locally
                 localStorage.setItem('hasVoted', true);
 
                 // Disable further voting
                 submitRatingBtn.disabled = true;
+                submitRatingBtn.textContent = 'Thank you for your rating';
 
-                // Send the rating to the server (this part is conceptual)
-                // This would involve an AJAX request to your server to save the vote
-                // For example:
-                // sendRatingToServer(currentRating);
+                // Send the rating to the server
+                await sendRatingToServer(currentRating);
 
-                // Update the UI (this should also reflect server-side storage)
-                updateRatingSummary(currentRating);
-                alert('Thank you for your rating!');
-            } else {
-                alert('Please select a rating before submitting.');
+                // Fetch updated rating data
+                const updatedRatingData = await fetchRatingData();
+                const averageRating = (updatedRatingData.totalRatings / updatedRatingData.numberOfRatings).toFixed(1);
+
+                // Update the UI
+                ratingSummary.textContent = `Average Rating: ${averageRating} / 5`;
+                ratingCounter.textContent = `${updatedRatingData.numberOfRatings} ratings submitted`;
             }
         });
     }
@@ -75,35 +109,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 star.classList.remove('gold');
             }
         });
-    }
-
-   function updateRatingSummary(newRating) {
-        // Get stored values from the server (this part is conceptual)
-        // This should be replaced by an AJAX call to get the current rating data from the server
-        // Example server response
-        let totalRatings = parseInt(localStorage.getItem('totalRatings')) || 0;
-        let numberOfRatings = parseInt(localStorage.getItem('numberOfRatings')) || 0;
-
-        totalRatings += newRating;
-        numberOfRatings++;
-
-        const averageRating = (totalRatings / numberOfRatings).toFixed(1);
-
-        ratingSummary.textContent = `Average Rating: ${averageRating} / 5`;
-        ratingCounter.textContent = `${numberOfRatings} ratings submitted`;
-
-        // Update stored values in localStorage (replace with server-side storage)
-        localStorage.setItem('totalRatings', totalRatings);
-        localStorage.setItem('numberOfRatings', numberOfRatings);
-    }
-
-    // Initialize summary with stored values
-    const totalRatings = parseInt(localStorage.getItem('totalRatings')) || 0;
-    const numberOfRatings = parseInt(localStorage.getItem('numberOfRatings')) || 0;
-    if (numberOfRatings > 0) {
-        const averageRating = (totalRatings / numberOfRatings).toFixed(1);
-        ratingSummary.textContent = `Average Rating: ${averageRating} / 5`;
-        ratingCounter.textContent = `${numberOfRatings} ratings submitted`;
     }
 });
 
@@ -129,4 +134,3 @@ document.querySelectorAll('.instructions input[type="checkbox"]').forEach(checkb
         }
     });
 });
-
