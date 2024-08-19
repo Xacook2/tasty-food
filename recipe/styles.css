@@ -1,188 +1,104 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    width: 80%;
-    margin: 20px auto;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: rgb(252, 250, 242);
-    border: 1px solid black;
-    border-radius: 10px;
-    overflow: hidden;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-
-header, footer {
+header h1 {
     text-align: center;
-    margin-bottom: 20px;
-    width: 100%;
+    font-size: 2.5em;
 }
 
 .recipe-image {
-    display: block;
-    margin: 0 auto;
-    width: 90%;
+    width: 100%;
     height: auto;
-    border-radius: 10px;
+    display: block;
+    margin-bottom: 20px;
 }
 
-.recipe-info ul, .nutritional-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.recipe-details {
+    margin-bottom: 40px;
+}
+
+.recipe-info {
+    list-style: none;
     padding: 0;
-    margin: 10px auto;
-    width: 90%;
-    justify-content: center;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    margin-bottom: 20px;
 }
 
-.recipe-info li, .nutritional-info li {
-    flex: 1 1 150px; 
-    padding: 5px;
-    text-align: center;
-    box-sizing: border-box;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.recipe-info li {
+    font-weight: bold;
 }
 
-.recipe-info li:before {
-    display: inline-block;
-    content: '';
-    margin-right: 5px;
-    width: 20px;
-    height: 20px;
-    background-repeat: no-repeat;
-    background-size: contain;
+.nutritional-info {
+    max-width: 300px;
+    margin-bottom: 20px;
 }
 
-.serves:before {
-    background-image: url('serving-icon.svg');
+.nutritional-info ul {
+    list-style: none;
+    padding: 0;
 }
 
-.time:before {
-    background-image: url('clock-icon.svg');
-}
-
-.person:before {
-    background-image: url('person-icon.svg');
-}
-
-.nutritional-info li {
-    height: 60px;
-    border: 1px solid black;
-    background-color: rgb(193, 225, 193);
-    width: 60px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    overflow-wrap: break-word;
-    font-size: 13px;
-}
-
-.recipe-details h2, .print-button {
-    text-align: center;
+.rating-container {
     margin-top: 20px;
 }
 
-.print-button button {
-    padding: 10px 20px;
-    margin: auto;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    height: 45px;
-    width: 125px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.stars {
+    font-size: 1.5em;
+    display: inline-block;
 }
 
-.print-button button:hover {
-    background-color: #0056b3;
+.stars span {
+    cursor: pointer;
+    margin-right: 5px;
+    color: black;
+}
+
+.rating-summary, .rating-counter {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+/* Metric/Imperial Toggle */
+.metric, .imperial {
+    display: none;
 }
 
 .crossed-out {
     text-decoration: line-through;
-    color: black;
+    color: #555;
 }
 
-.metric {
-    display: list-item;
+/* Button Styles */
+.w3-button {
+    margin: 5px;
 }
 
-.imperial {
-    display: none;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .recipe-details {
+        text-align: center;
+    }
 
-.ingredients, .instructions {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin: 10px auto;
-    padding: 0;
-}
+    .recipe-info {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
-.ingredients li, .instructions li {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.ingredients label, .instructions label {
-    flex: 1;
-    white-space: normal;
-    margin-left: 5px;
-}
-
-.ingredients input[type="checkbox"], .instructions input[type="checkbox"] {
-    flex-shrink: 0;
-    margin-top: 3px;
-}
-
-.btn {
-    display: flex;
-    justify-content: left;
-    gap: 10px;
-    height: 40px;  
-    margin-bottom: 15px;
-}
-
-.stars {
-    display: inline-block;
-    cursor: pointer;
-}
-
-.star {
-    font-size: 30px;
-    color: gray;
-}
-
-.star.gold {
-    color: gold;
-}
-
-.rating-container {
-    text-align: center;
-    margin: 50px;
-}
-
-#rating-summary, #rating-counter {
-    margin-top: 20px;
-}
-
-@media only screen and (min-width: 600px) {
-  .recipe-image {
-    width: 50%;
-    float: left;
-  }
+    .nutritional-info {
+        text-align: center;
+        margin: 0 auto;
+    }
 }
