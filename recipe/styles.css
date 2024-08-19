@@ -34,6 +34,7 @@ header, footer {
     width: 90%;
     height: auto;
     border-radius: 10px;
+    float: left;
 }
 
 .recipe-info ul, .nutritional-info {
