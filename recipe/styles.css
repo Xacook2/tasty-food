@@ -21,10 +21,6 @@ ul {
     margin: 0;
 }
 
-.recipe-image {
-    float: left;
-    margin-left: 10%;
-}
 
 header, footer {
     text-align: center;
@@ -36,7 +32,6 @@ header, footer {
     display: block;
     margin: 0 auto;
     width: 90%;
-    max-width: 100%;
     height: auto;
     border-radius: 10px;
 }
@@ -185,7 +180,7 @@ header, footer {
 }
 
 @media only screen and (min-width: 600px) {
-  .recipe image {
+  .recipe-image {
     width: 40%
   }
 }
