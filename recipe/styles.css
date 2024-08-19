@@ -182,7 +182,7 @@ header, footer {
 
 @media only screen and (min-width: 600px) {
   .recipe-image {
-    width: 50%
+    width: 50%;
     float: left;
   }
 }
