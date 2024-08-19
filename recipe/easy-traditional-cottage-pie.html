@@ -6,7 +6,6 @@
     <meta name="author" content="Xavi Jenkins">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cottage Pie Recipe</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="w3-light-grey">
@@ -29,7 +28,7 @@
                 <li>kcal 443</li>
                 <li>fat 35.8g</li>
                 <li>saturated 16.6g</li>
-                <li>protien 21.8g</li>
+                <li>protein 21.8g</li>
                 <li>carbs 31g</li>
                 <li>sugar 4g</li>
                 <li>fiber 3.3g</li>
@@ -37,17 +36,17 @@
             </ul>
         </section>
         <div class="rating-container">
-        <div class="stars">
-            <span class="star" data-value="1">&#9733;</span>
-            <span class="star" data-value="2">&#9733;</span>
-            <span class="star" data-value="3">&#9733;</span>
-            <span class="star" data-value="4">&#9733;</span>
-            <span class="star" data-value="5">&#9733;</span>
+            <div class="stars">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <button id="submit-rating">Submit Rating</button>
+            <div id="rating-summary">Average Rating: 0 / 5</div>
+            <div id="rating-counter">0 ratings submitted</div>
         </div>
-        <button id="submit-rating">Submit Rating</button>
-        <div id="rating-summary">Average Rating: 0 / 5</div>
-        <div id="rating-counter">0 ratings submitted</div>
-    </div>
     </section>
     <section class="ingredients w3-col m4 s10">
         <h2>Ingredients</h2>
@@ -57,58 +56,47 @@
         </div>
         <ul>
             <li class="metric"><input type="checkbox" id="ingredient1-metric"> <label for="ingredient1-metric">1kg ground beef</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient2-metric"> <label for="ingredient2-metric">2 tbsp Worcestershire sauce (optional)</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient3-metric"> <label for="ingredient3-metric">2 tbsp tomato purée</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient4-metric"> <label for="ingredient4-metric">1.5 tsp thyme</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient5-metric"> <label for="ingredient5-metric">2 tsp dried oregano</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient6-metric"> <label for="ingredient6-metric">1 large onion, finely chopped</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient7-metric"> <label for="ingredient7-metric">2 carrots, finely chopped</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient2-metric"> <label for="ingredient2-metric">200ml beef stock</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient3-metric"> <label for="ingredient3-metric">100ml red wine</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient4-metric"> <label for="ingredient4-metric">1 tbsp Worcestershire sauce</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient5-metric"> <label for="ingredient5-metric">1 large onion, diced</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient6-metric"> <label for="ingredient6-metric">2 carrots, peeled and diced</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient7-metric"> <label for="ingredient7-metric">2 tbsp tomato purée</label></li>
             <li class="metric"><input type="checkbox" id="ingredient8-metric"> <label for="ingredient8-metric">2 tbsp plain flour</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient9-metric"> <label for="ingredient9-metric">400ml beef stock</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient10-metric"> <label for="ingredient10-metric">100ml red wine (optional)</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient12-metric"> <label for="ingredient12-metric">Salt and pepper to taste</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient13-metric"> <label for="ingredient13-metric">1kg potatoes, peeled and chopped</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient14-metric"> <label for="ingredient14-metric">100ml milk</label></li>
-            <li class="metric"><input type="checkbox" id="ingredient15-metric"> <label for="ingredient15-metric">100g butter</label></li>
-           
+            <li class="metric"><input type="checkbox" id="ingredient9-metric"> <label for="ingredient9-metric">1 tbsp fresh thyme</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient10-metric"> <label for="ingredient10-metric">Salt and pepper to taste</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient11-metric"> <label for="ingredient11-metric">1kg potatoes, peeled and chopped</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient12-metric"> <label for="ingredient12-metric">50g butter</label></li>
+            <li class="metric"><input type="checkbox" id="ingredient13-metric"> <label for="ingredient13-metric">100ml milk</label></li>
             <li class="imperial"><input type="checkbox" id="ingredient1-imperial"> <label for="ingredient1-imperial">2.2 lbs ground beef</label></li>
-            <li class="imperial"><input type="checkbox" id="ingredient2-imperial"> <label for="ingredient2-imperial">2 tbsp Worcestershire sauce (optional)</label></li>
-            <li class="imperial"><input type="checkbox" id="ingredient3-imperial"> <label for="ingredient3-imperial">2 tbsp tomato paste</label></li>
-            <li class="imperial"><input type="checkbox" id="ingredient4-imperial"> <label for="ingredient4-imperial">1.5 tsp thyme</label></li>
-            <li class="imperial"><input type="checkbox" id="ingredient5-imperial"> <label for="ingredient5-imperial">2 tsp dried oregano</label></li>
-            <li class="imperial"><input type="checkbox" id="ingredient6-imperial"> <label for="ingredient6-imperial">1 large onion, finely chopped</label></li>
-            <li class="imperial"><input type="checkbox" id="ingredient7-imperial"> <label for="ingredient7-imperial">2 carrots, finely chopped</label></li>
+            <li class="imperial"><input type="checkbox" id="ingredient2-imperial"> <label for="ingredient2-imperial">7 fl oz beef stock</label></li>
+            <li class="imperial"><input type="checkbox" id="ingredient3-imperial"> <label for="ingredient3-imperial">3.5 fl oz red wine</label></li>
+            <li class="imperial"><input type="checkbox" id="ingredient4-imperial"> <label for="ingredient4-imperial">1 tbsp Worcestershire sauce</label></li>
+            <li class="imperial"><input type="checkbox" id="ingredient5-imperial"> <label for="ingredient5-imperial">1 large onion, diced</label></li>
+            <li class="imperial"><input type="checkbox" id="ingredient6-imperial"> <label for="ingredient6-imperial">2 carrots, peeled and diced</label></li>
+            <li class="imperial"><input type="checkbox" id="ingredient7-imperial"> <label for="ingredient7-imperial">2 tbsp tomato paste</label></li>
             <li class="imperial"><input type="checkbox" id="ingredient8-imperial"> <label for="ingredient8-imperial">2 tbsp all-purpose flour</label></li>
-            <li class="imperial"><input type="checkbox" id="ingredient9-imperial"> <label for="ingredient9-imperial">1 3/4 cups beef stock</label></li>
-            <li class="imperial"><input type="checkbox" id="ingredient10-imperial"> <label for="ingredient10-imperial">1/2 cup red wine (optional)</label></li>
-            <li class="imperial"><input type="checkbox" id="ingredient11-imperial"> <label for="ingredient11-imperial">2 tbsp tomato ketchup</label></li>
-            <li class="imperial"><input type="checkbox" id="ingredient12-imperial"> <label for="ingredient12-imperial">Salt and pepper to taste</label></li>
-            <li class="imperial"><input type="checkbox" id="ingredient13-imperial"> <label for="ingredient13-imperial">2.2 lbs potatoes, peeled and chopped</label></li>
-            <li class="imperial"><input type="checkbox" id="ingredient14-imperial"> <label for="ingredient14-imperial">1/2 cup milk</label></li>
-            <li class="imperial"><input type="checkbox" id="ingredient15-imperial"> <label for="ingredient15-imperial">1/2 cup butter</label></li>
+            <li class="imperial"><input type="checkbox" id="ingredient9-imperial"> <label for="ingredient9-imperial">1 tbsp fresh thyme</label></li>
+            <li class="imperial"><input type="checkbox" id="ingredient10-imperial"> <label for="ingredient10-imperial">Salt and pepper to taste</label></li>
+            <li class="imperial"><input type="checkbox" id="ingredient11-imperial"> <label for="ingredient11-imperial">2.2 lbs potatoes, peeled and chopped</label></li>
+            <li class="imperial"><input type="checkbox" id="ingredient12-imperial"> <label for="ingredient12-imperial">1/4 cup butter</label></li>
+            <li class="imperial"><input type="checkbox" id="ingredient13-imperial"> <label for="ingredient13-imperial">3.5 fl oz milk</label></li>
         </ul>
     </section>
-    <section class="instructions w3-col m7 s10">
+    <section class="instructions w3-col m4 s10">
         <h2>Instructions</h2>
         <ul>
-                <li><input type="checkbox" id="step1"> <label for="step1">1. Prepear your vegetables.</li>
-                <li><input type="checkbox" id="step2"> <label for="step2">2. Preheat the oven to 200°C (400°F).</label></li>
-                <li><input type="checkbox" id="step3"> <label for="step3">3. In a large frying pan, sauté the carrots and onions in 2 tbs of vegetable oil for 3 minutes until the onions are translucent.</label></li>
-                <li><input type="checkbox" id="step4"> <label for="step4">4. Add ground beef, mushrooms, and crushed garlic to the pan. Fry until the beef is browned and drain access fat.</label></li>
-                <li><input type="checkbox" id="step5"> <label for="step5">5. Add red wine, Worcestershire sauce, tomato purée, and a beef stock cube. Reduce heat to simmer.</label></li>
-                <li><input type="checkbox" id="step6"> <label for="step6">6. While the sauce simmers, boil the potatoes in salted water for 15-30 minutes until soft and tender and Drain.</label></li>
-                <li><input type="checkbox" id="step7"> <label for="step7">7. In a saucepan, heat milk and butter until butter melts and mash the potatoes.</label></li>
-                <li><input type="checkbox" id="step8"> <label for="step8">8. Layer the beef filling in a baking dish. Spread mashed potatoes over the top. Sprinkle  grated cheese.</label></li>
-                <li><input type="checkbox" id="step9"> <label for="step9">9. Bake in the preheated oven for 25-30 minutes until golden brown.</label></li>
-                <li><input type="checkbox" id="step10"> <label for="step10">10. Remove from oven and let it cool for 5 minutes before serving.</label></li>
+            <li><input type="checkbox" id="instruction1"> <label for="instruction1">Preheat the oven to 200°C (400°F).</label></li>
+            <li><input type="checkbox" id="instruction2"> <label for="instruction2">In a large pan, brown the ground beef over medium heat.</label></li>
+            <li><input type="checkbox" id="instruction3"> <label for="instruction3">Add the onion, carrots, and cook until softened.</label></li>
+            <li><input type="checkbox" id="instruction4"> <label for="instruction4">Stir in the tomato purée, Worcestershire sauce, and thyme. Cook for 2 minutes.</label></li>
+            <li><input type="checkbox" id="instruction5"> <label for="instruction5">Sprinkle the flour over the mixture, and stir well.</label></li>
+            <li><input type="checkbox" id="instruction6"> <label for="instruction6">Gradually add the beef stock and red wine, simmering until thickened.</label></li>
+            <li><input type="checkbox" id="instruction7"> <label for="instruction7">In another pot, boil the potatoes until tender, then mash with butter and milk.</label></li>
+            <li><input type="checkbox" id="instruction8"> <label for="instruction8">Spread the beef mixture in a baking dish, then top with mashed potatoes.</label></li>
+            <li><input type="checkbox" id="instruction9"> <label for="instruction9">Bake for 25-30 minutes, or until the top is golden brown.</label></li>
         </ul>
     </section>
-    <div class="print-button">
-        <button onclick="window.print()">Print Recipe</button>
-    </div>
-    <footer>
-        <p>Recipe by Xavi Jenkins</p>
-    </footer>
 </main>
 <script src="script.js"></script>
 </body>
