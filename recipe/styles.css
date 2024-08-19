@@ -84,6 +84,7 @@ header, footer {
     background-color: rgb(193, 225, 193);
     width: 60px;
     border-radius: 5px;
+    margin-bottom: 5px;
     overflow-wrap: break-word;
     font-size: 13px;
 }
