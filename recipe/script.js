@@ -1,96 +1,52 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const metricElements = document.querySelectorAll('.metric');
-    const imperialElements = document.querySelectorAll('.imperial');
-    const starElements = document.querySelectorAll('.star');
-    const ratingSummary = document.getElementById('rating-summary');
-    const ratingCounter = document.getElementById('rating-counter');
-    let userRating = localStorage.getItem('userRating') || 0;
+document.addEventListener('DOMContentLoaded', () => {
+    const stars = document.querySelectorAll('.star');
+    const submitButton = document.getElementById('submit-rating');
+    const averageRatingElement = document.getElementById('average-rating');
+    const voteCountElement = document.getElementById('vote-count');
 
-    // Show metric by default
-    function showMetric() {
-        metricElements.forEach(el => el.style.display = 'list-item');
-        imperialElements.forEach(el => el.style.display = 'none');
+    let userRating = 0;
+    let hasVoted = localStorage.getItem('hasVoted') === 'true';
+
+    const mockServerData = {
+        totalRating: 0,
+        voteCount: 0,
+    };
+
+    function calculateAverage() {
+        return (mockServerData.voteCount === 0) ? 0 : (mockServerData.totalRating / mockServerData.voteCount).toFixed(2);
     }
 
-    function showImperial() {
-        metricElements.forEach(el => el.style.display = 'none');
-        imperialElements.forEach(el => el.style.display = 'list-item');
+    function updateResults() {
+        averageRatingElement.textContent = calculateAverage();
+        voteCountElement.textContent = mockServerData.voteCount;
     }
 
-    function highlightStars(rating) {
-        starElements.forEach((star, index) => {
-            star.style.color = index < rating ? 'gold' : 'black';
+    function updateStarSelection() {
+        stars.forEach(star => {
+            star.classList.toggle('selected', star.dataset.value <= userRating);
         });
     }
 
-    function fetchRatingData() {
-        const ratingData = JSON.parse(localStorage.getItem('ratingData')) || {
-            totalRating: 0,
-            numberOfRatings: 0,
-        };
-        updateRatingUI(ratingData.totalRating, ratingData.numberOfRatings);
-    }
-
-    function updateRatingUI(totalRating, numberOfRatings) {
-        const averageRating = numberOfRatings > 0 ? (totalRating / numberOfRatings).toFixed(2) : 0;
-        ratingSummary.textContent = `Average Rating: ${averageRating} / 5`;
-        ratingCounter.textContent = `${numberOfRatings} ratings submitted`;
-    }
-
-    function sendRatingToServer(rating) {
-        let ratingData = JSON.parse(localStorage.getItem('ratingData')) || {
-            totalRating: 0,
-            numberOfRatings: 0,
-        };
-
-        ratingData.totalRating += rating;
-        ratingData.numberOfRatings += 1;
-
-        localStorage.setItem('ratingData', JSON.stringify(ratingData));
-        updateRatingUI(ratingData.totalRating, ratingData.numberOfRatings);
-    }
-
-    // Toggle ingredient and instruction checkboxes
-    function toggleStrikeThrough(event) {
-        const label = event.target.nextElementSibling;
-        if (event.target.checked) {
-            label.classList.add('crossed-out');
-        } else {
-            label.classList.remove('crossed-out');
-        }
-    }
-
-    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-        checkbox.addEventListener('change', toggleStrikeThrough);
-    });
-
-    // Star rating logic
-    starElements.forEach(star => {
-        star.addEventListener('mouseover', function() {
-            highlightStars(star.dataset.value);
-        });
-
-        star.addEventListener('mouseout', function() {
-            highlightStars(userRating);
-        });
-
-        star.addEventListener('click', function() {
-            userRating = parseInt(star.dataset.value);
-            localStorage.setItem('userRating', userRating);
-            highlightStars(userRating);
+    stars.forEach(star => {
+        star.addEventListener('click', () => {
+            if (hasVoted) return;
+            userRating = star.dataset.value;
+            updateStarSelection();
         });
     });
 
-    document.getElementById('submit-rating').addEventListener('click', function() {
-        if (userRating > 0) {
-            sendRatingToServer(userRating);
-        } else {
-            alert('Please select a rating before submitting.');
-        }
+    submitButton.addEventListener('click', () => {
+        if (hasVoted || userRating === 0) return;
+        
+        mockServerData.totalRating += parseInt(userRating);
+        mockServerData.voteCount += 1;
+
+        localStorage.setItem('hasVoted', 'true');
+        hasVoted = true;
+
+        updateResults();
     });
 
-    // Initial UI setup
-    showMetric();
-    highlightStars(userRating);
-    fetchRatingData();
+    // Simulating server loading
+    updateResults();
 });
