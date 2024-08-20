@@ -1,124 +1,57 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
-/* Container */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    background-color;
 }
 
-/* Header */
 header {
-    text-align: center;
-    margin-bottom: 20px;
+    background: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
 }
 
-/* Recipe Image */
-.recipe-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+header h1 {
+    margin: 0;
 }
 
-/* Recipe Details */
-.recipe-details {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+h2 {
+    color: #35424a;
 }
 
-/* Recipe Info */
-.recipe-info {
-    list-style-type: none;
-    padding: 0;
-}
-
-.recipe-info li {
-    margin-bottom: 10px;
-}
-
-/* Nutritional Info */
-.nutritional-info ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.nutritional-info li {
-    margin-bottom: 5px;
-}
-
-/* Rating Container */
-.rating-container {
-    margin-top: 20px;
-}
-
-.stars {
-    display: inline-block;
+#star-container {
+    margin: 10px 0;
 }
 
 .star {
-    font-size: 24px;
+    font-size: 30px;
     cursor: pointer;
-    color: #ccc;
+    color: #cccccc;
 }
 
+.star.selected,
 .star:hover,
-.star.selected {
-    color: #f5b301;
+.star:hover ~ .star {
+    color: #e8491d;
 }
 
-/* Ingredients and Instructions */
-.ingredients,
-.instructions {
+#results {
     margin-top: 20px;
 }
 
-.ingredients ul,
-.instructions ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.ingredients li,
-.instructions li {
-    margin-bottom: 10px;
-}
-
-.ingredients .metric,
-.ingredients .imperial {
-    display: none;
-}
-
-/* Buttons */
-.btn {
-    margin-bottom: 20px;
-}
-
-.w3-button {
-    padding: 10px 20px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.w3-blue {
-    background-color: #2196F3;
-}
-
-.w3-button:hover {
-    background-color: #0b7dda;
-}
-
-/* Rating Summary */
-#rating-summary,
-#rating-counter {
-    margin-top: 10px;
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #35424a;
+    text-align: center;
 }
