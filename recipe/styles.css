@@ -1,95 +1,191 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f8f8f8;
     margin: 0;
     padding: 0;
 }
 
 .container {
     width: 80%;
-    margin: auto;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(252, 250, 242);
+    border: 1px solid black;
+    border-radius: 10px;
     overflow: hidden;
 }
 
-header {
-    background: #35424a;
-    color: #ffffff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #e8491d 3px solid;
-}
-
-header a {
-    color: #ffffff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-}
-
-header ul {
+ul {
+    list-style-type: none;
     padding: 0;
-    list-style: none;
-}
-
-header li {
-    float: left;
-    display: inline;
-    padding: 0 20px 0 20px;
-}
-
-header #branding {
-    float: left;
-}
-
-header #branding h1 {
     margin: 0;
 }
 
-header nav {
-    float: right;
-    margin-top: 10px;
+
+header, footer {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
-header .highlight, header .current a {
-    color: #e8491d;
-    font-weight: bold;
+.recipe-image {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
 }
 
-header a:hover {
-    color: #cccccc;
-    font-weight: bold;
+.recipe-info ul, .nutritional-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin: 10px auto;
+    width: 90%;
+    justify-content: center;
 }
 
-button {
+.recipe-info li, .nutritional-info li {
+    flex: 1 1 150px; 
+    padding: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-info li:before {
     display: inline-block;
-    font-size: 18px;
-    background-color: #e8491d;
-    color: #ffffff;
+    content: '';
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.serves:before {
+    background-image: url('serving-icon.svg');
+}
+
+.time:before {
+    background-image: url('clock-icon.svg');
+}
+
+.person:before {
+    background-image: url('person-icon.svg');
+}
+
+.nutritional-info li {
+    height: 60px;
+    border: 1px solid black;
+    background-color: rgb(193, 225, 193);
+    width: 60px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    overflow-wrap: break-word;
+    font-size: 13px;
+}
+
+.recipe-details h2, .print-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.print-button button {
     padding: 10px 20px;
+    margin: auto;
+    background-color: #007BFF;
+    color: white;
     border: none;
+    height: 45px;
+    width: 125px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.print-button button:hover {
+    background-color: #0056b3;
+}
+
+.crossed-out {
+    text-decoration: line-through;
+    color: black;
+}
+
+.metric {
+    display: list-item;
+}
+
+.imperial {
+    display: none;
+}
+
+.ingredients, .instructions {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 10px auto;
+    padding: 0;
+}
+
+.ingredients li, .instructions li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.ingredients label, .instructions label {
+    flex: 1;
+    white-space: normal;
+    margin-left: 5px;
+}
+
+.ingredients input[type="checkbox"], .instructions input[type="checkbox"] {
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.btn {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    height: 40px;  
+    margin-bottom: 15px;
+}
+
+.stars {
+    display: inline-block;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #35424a;
+.star {
+    font-size: 30px;
+    color: gray;
 }
 
-h2 {
-    color: #35424a;
+.star.gold {
+    color: gold;
 }
 
-ul {
-    line-height: 1.6;
-}
-
-footer {
-    padding: 20px;
-    margin-top: 20px;
-    color: #ffffff;
-    background-color: #35424a;
+.rating-container {
     text-align: center;
+    margin: 50px;
 }
 
+#rating-summary, #rating-counter {
+    margin-top: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+  .recipe-image {
+    width: 50%;
+    float: left;
+  }
+}
 
 #star-container {
     margin: 10px 0;
