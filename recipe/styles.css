@@ -187,22 +187,37 @@ header, footer {
   }
 }
 
-#star-container {
-    margin: 10px 0;
+#star-rating {
+    display: flex;
+    margin-bottom: 10px;
 }
 
 .star {
-    font-size: 30px;
+    font-size: 2rem;
+    color: gold;
     cursor: pointer;
-    color: #cccccc;
+    transition: color 0.2s ease-in-out;
 }
 
-.star.selected,
 .star:hover,
-.star:hover ~ .star {
-    color: #e8491d;
+.star.selected {
+    color: orange;
 }
 
-#results {
+#submit-rating {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+#submit-rating:hover {
+    background-color: #555;
+}
+
+#average-rating {
     margin-top: 20px;
 }
