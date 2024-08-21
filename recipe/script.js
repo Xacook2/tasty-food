@@ -1,52 +1,62 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
     const stars = document.querySelectorAll('.star');
     const submitButton = document.getElementById('submit-rating');
-    const averageRatingElement = document.getElementById('average-rating');
-    const voteCountElement = document.getElementById('vote-count');
-
-    let userRating = 0;
-    let hasVoted = localStorage.getItem('hasVoted') === 'true';
-
-    const mockServerData = {
-        totalRating: 0,
-        voteCount: 0,
-    };
-
-    function calculateAverage() {
-        return (mockServerData.voteCount === 0) ? 0 : (mockServerData.totalRating / mockServerData.voteCount).toFixed(2);
-    }
-
-    function updateResults() {
-        averageRatingElement.textContent = calculateAverage();
-        voteCountElement.textContent = mockServerData.voteCount;
-    }
-
-    function updateStarSelection() {
-        stars.forEach(star => {
-            star.classList.toggle('selected', star.dataset.value <= userRating);
-        });
-    }
+    const averageStarsElement = document.getElementById('average-stars');
+    const totalVotesElement = document.getElementById('total-votes');
+    let selectedRating = 0;
+    let votes = 0;
+    let totalRating = 0;
+    let hasVoted = false;
 
     stars.forEach(star => {
-        star.addEventListener('click', () => {
-            if (hasVoted) return;
-            userRating = star.dataset.value;
-            updateStarSelection();
+        star.addEventListener('click', function () {
+            if (hasVoted) {
+                alert('You have already voted!');
+                return;
+            }
+            selectedRating = parseInt(this.getAttribute('data-value'));
+            highlightStars(selectedRating);
+        });
+
+        star.addEventListener('mouseover', function () {
+            if (!hasVoted) {
+                const hoverValue = parseInt(this.getAttribute('data-value'));
+                highlightStars(hoverValue);
+            }
+        });
+
+        star.addEventListener('mouseout', function () {
+            if (!hasVoted) {
+                highlightStars(selectedRating);
+            }
         });
     });
 
-    submitButton.addEventListener('click', () => {
-        if (hasVoted || userRating === 0) return;
-        
-        mockServerData.totalRating += parseInt(userRating);
-        mockServerData.voteCount += 1;
+    submitButton.addEventListener('click', function () {
+        if (hasVoted || selectedRating === 0) {
+            alert('Please select a rating!');
+            return;
+        }
 
-        localStorage.setItem('hasVoted', 'true');
+        totalRating += selectedRating;
+        votes += 1;
         hasVoted = true;
 
-        updateResults();
+        const averageRating = (totalRating / votes).toFixed(1);
+
+        averageStarsElement.textContent = averageRating;
+        totalVotesElement.textContent = votes;
+
+        alert(`Thank you for rating! You gave ${selectedRating} stars.`);
     });
 
-    // Simulating server loading
-    updateResults();
+    function highlightStars(rating) {
+        stars.forEach((star, index) => {
+            if (index < rating) {
+                star.classList.add('selected');
+            } else {
+                star.classList.remove('selected');
+            }
+        });
+    }
 });
