@@ -1,61 +1,47 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const stars = document.querySelectorAll('.star');
-    const submitButton = document.getElementById('submit-rating');
-    const averageStarsElement = document.getElementById('average-stars');
-    const totalVotesElement = document.getElementById('total-votes');
-    let selectedRating = 0;
-    let votes = 0;
-    let totalRating = 0;
-    let hasVoted = false;
+document.addEventListener("DOMContentLoaded", function () {
+    const stars = document.querySelectorAll(".star");
+    const averageRatingEl = document.getElementById("average-rating");
+    const totalRatingsEl = document.getElementById("total-ratings");
+    const ratingSummaryEls = {
+        5: document.getElementById("five-star-count"),
+        4: document.getElementById("four-star-count"),
+        3: document.getElementById("three-star-count"),
+        2: document.getElementById("two-star-count"),
+        1: document.getElementById("one-star-count")
+    };
 
+    let ratings = [];
+    
     stars.forEach(star => {
-        star.addEventListener('click', function () {
-            if (hasVoted) {
-                alert('You have already voted!');
-                return;
-            }
-            selectedRating = parseInt(this.getAttribute('data-value'));
-            highlightStars(selectedRating);
-        });
-
-        star.addEventListener('mouseover', function () {
-            if (!hasVoted) {
-                const hoverValue = parseInt(this.getAttribute('data-value'));
-                highlightStars(hoverValue);
-            }
-        });
-
-        star.addEventListener('mouseout', function () {
-            if (!hasVoted) {
-                highlightStars(selectedRating);
-            }
+        star.addEventListener("click", function () {
+            const rating = parseInt(star.getAttribute("data-value"));
+            ratings.push(rating);
+            updateDisplay();
         });
     });
 
-    submitButton.addEventListener('click', function () {
-        if (hasVoted || selectedRating === 0) {
-            alert('Please select a rating!');
-            return;
+    function updateDisplay() {
+        const totalRatings = ratings.length;
+        const averageRating = (totalRatings > 0) ? (ratings.reduce((acc, val) => acc + val, 0) / totalRatings).toFixed(2) : 0.0;
+        
+        averageRatingEl.textContent = `Average Rating: ${averageRating} stars`;
+        totalRatingsEl.textContent = `Total Ratings: ${totalRatings}`;
+
+        const ratingSummary = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+        ratings.forEach(rating => {
+            ratingSummary[rating]++;
+        });
+
+        for (let i = 1; i <= 5; i++) {
+            ratingSummaryEls[i].textContent = ratingSummary[i];
         }
 
-        totalRating += selectedRating;
-        votes += 1;
-        hasVoted = true;
-
-        const averageRating = (totalRating / votes).toFixed(1);
-
-        averageStarsElement.textContent = averageRating;
-        totalVotesElement.textContent = votes;
-
-        alert(`Thank you for rating! You gave ${selectedRating} stars.`);
-    });
-
-    function highlightStars(rating) {
-        stars.forEach((star, index) => {
-            if (index < rating) {
-                star.classList.add('selected');
+        stars.forEach(star => {
+            const value = parseInt(star.getAttribute("data-value"));
+            if (value <= averageRating) {
+                star.classList.add("selected");
             } else {
-                star.classList.remove('selected');
+                star.classList.remove("selected");
             }
         });
     }
