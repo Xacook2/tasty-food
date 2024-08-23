@@ -13,6 +13,11 @@ const createTableSQL = `
   )
 `;
 
+function storeValue() {
+    const user = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+}
+
 
 // Function to show ingredients in metric units
 function showMetric() {
