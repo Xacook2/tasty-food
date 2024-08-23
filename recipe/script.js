@@ -1,3 +1,19 @@
+
+const sqlite3 = require('sqlite3').verbose(); // Import the sqlite3 library
+
+// Open a connection to the SQLite database
+const db = new sqlite3.Database('database.db');
+
+// SQL statement to create the table if it doesn't already exist
+const createTableSQL = `
+  CREATE TABLE IF NOT EXISTS users (
+    username TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL,
+    rating INT NOT NULL
+  )
+`;
+
+
 // Function to show ingredients in metric units
 function showMetric() {
     document.querySelectorAll('.metric').forEach(el => el.style.display = 'list-item');
