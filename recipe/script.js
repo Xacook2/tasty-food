@@ -14,10 +14,14 @@ const createTableSQL = `
 `;
 
 function storeValue() {
-    const user = document.getElementById('username').value;
+    const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 }
 
+function storeValue1() {
+    const username = document.getElementById('user').value;
+    const password = document.getElementById('pass').value;
+}
 
 // Function to show ingredients in metric units
 function showMetric() {
