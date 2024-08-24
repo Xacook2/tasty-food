@@ -1,14 +1,19 @@
+const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database('database.db');
+
+db.run(`CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL
+)`);
+
 function storeValue() {
-    const sqlite3 = require('sqlite3').verbose();
-    const db = new sqlite3.Database('database.db');
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     db.run('INSERT INTO users (username, password) VALUES (?, ?)', [username, password]);
     db.close();
 }
 function storeValue1() {
-    const sqlite3 = require('sqlite3').verbose();
-    const db = new sqlite3.Database('database.db');
     const user = document.getElementById('user').value;
     const pass = document.getElementById('pass').value;
     db.get('SELECT * FROM users WHERE username = ? AND password = ?', [user, pass], function(err, row) {
