@@ -1,39 +1,3 @@
-const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database('database.db');
-
-// # modified: Ensure that the table is created if it doesn't already exist
-db.run(`CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username TEXT NOT NULL UNIQUE,
-    password TEXT NOT NULL
-)`, (err) => {
-    if (err) {
-        console.error('Error creating table', err.message);
-    } else {
-        console.log('Users table is ready or already exists.');
-    }
-});
-
-function storeValue(username, password) {
-    db.run('INSERT INTO users (username, password) VALUES (?, ?)', [username, password], function(err) {
-        if (err) {
-            console.error('Error inserting user', err.message);
-        } else {
-            console.log('User stored successfully');
-        }
-    });
-}
-
-function authenticateUser(username, password, callback) {
-    db.get('SELECT * FROM users WHERE username = ? AND password = ?', [username, password], function(err, row) {
-        if (err) {
-            console.error('Error fetching user', err.message);
-            callback(err, null);
-        } else {
-            callback(null, row);
-        }
-    });
-}
 
 
 document.addEventListener("DOMContentLoaded", function () {
