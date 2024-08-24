@@ -1,3 +1,19 @@
+function storeValue() {
+    const sqlite3 = require('sqlite3').verbose();
+    const db = new sqlite3.Database('database.db');
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    db.run('INSERT INTO users (username, password) VALUES (?, ?)', [varusername, varpassword]);
+}
+function storeValue1() {
+    const sqlite3 = require('sqlite3').verbose();
+    const db = new sqlite3.Database('database.db');
+    const user = document.getElementById('user').value;
+    const pass = document.getElementById('pass').value;
+    
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const stars = document.querySelectorAll(".star");
     const averageRatingEl = document.getElementById("average-rating");
