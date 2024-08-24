@@ -3,14 +3,22 @@ function storeValue() {
     const db = new sqlite3.Database('database.db');
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    db.run('INSERT INTO users (username, password) VALUES (?, ?)', [varusername, varpassword]);
+    db.run('INSERT INTO users (username, password) VALUES (?, ?)', [username, password]);
+    db.close();
 }
 function storeValue1() {
     const sqlite3 = require('sqlite3').verbose();
     const db = new sqlite3.Database('database.db');
     const user = document.getElementById('user').value;
     const pass = document.getElementById('pass').value;
-    
+    db.get('SELECT * FROM users WHERE username = ? AND password = ?', [user, pass], function(err, row) {
+    if (row) {
+        console.log(row); // This will print the row if a match is found
+    } else {
+        console.log('No user found');
+    }
+});
+    db.close();
 }
 
 
