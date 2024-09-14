@@ -10,24 +10,27 @@ def index():
 def submit():
     username = request.form['username']
     password = request.form['password']
-    with open('create_table.sql', 'r') as file:
-      create_table_sql = file.read()
-    conn = sqlite3.connect('database.db')
-    cursor = conn.cursor()
-    cursor.executescript(create_table_sql)
-    cursor.execute('''SELECT * FROM users WHERE username = ?''', (username,))
-    if cursor.fetchone():
-      return 'username is taken'
-    else:
-        cursor.execute('''
-                      INSERT INTO users (username, password)
-                      VALUES (?, ?)
-                      ''', (username, password))
-        userid = username[0]
-        conn.commit()
-        conn.close()
-        return "You are now signed up and logged in"
-
+    try:
+        with open('create_table.sql', 'r') as file:
+          create_table_sql = file.read()
+        conn = sqlite3.connect('database.db')
+        cursor = conn.cursor()
+        cursor.executescript(create_table_sql)
+        cursor.execute('''SELECT * FROM users WHERE username = ?''', (username,))
+        if cursor.fetchone():
+          return 'username is taken'
+        else:
+            cursor.execute('''
+                          INSERT INTO users (username, password)
+                          VALUES (?, ?)
+                          ''', (username, password))
+            userid = username[0]
+            conn.commit()
+            conn.close()
+            return "You are now signed up and logged in"
+        except:
+            pass
+    
 
 @app.route('/submitl', methods=['POST'])
 def submitl():
