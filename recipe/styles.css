@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
@@ -13,6 +14,7 @@ body {
     border: 1px solid black;
     border-radius: 10px;
     overflow: hidden;
+	min-height: 100%;
 }
 
 ul {
@@ -36,19 +38,18 @@ header, footer {
     border-radius: 10px;
 }
 
-.recipe-info ul, .nutritional-info {
+.recipe-info ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    padding: 0;
-    margin: 10px auto;
+    padding: auto;
+    margin:auto;
     width: 90%;
     justify-content: center;
 }
 
-.recipe-info li, .nutritional-info li {
+.recipe-info li {
     flex: 1 1 150px; 
-    padding: 5px;
+    padding:auto;
     text-align: center;
     box-sizing: border-box;
     display: inline-flex;
@@ -56,6 +57,17 @@ header, footer {
     justify-content: center;
 }
 
+.nutritional-info li {
+ border: 1px solid black;
+ padding: 5px;
+ float: left;
+ background-color: rgb(193, 225, 193);;
+ hight: 60px;
+ width: 60px;
+text-align: center;
+margin-left: 5px;
+border-radius: 5px;
+}
 .recipe-info li:before {
     display: inline-block;
     content: '';
@@ -64,29 +76,6 @@ header, footer {
     height: 20px;
     background-repeat: no-repeat;
     background-size: contain;
-}
-
-.serves:before {
-    background-image: url('serving-icon.svg');
-}
-
-.time:before {
-    background-image: url('clock-icon.svg');
-}
-
-.person:before {
-    background-image: url('person-icon.svg');
-}
-
-.nutritional-info li {
-    height: 60px;
-    border: 1px solid black;
-    background-color: rgb(193, 225, 193);
-    width: 60px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    overflow-wrap: break-word;
-    font-size: 13px;
 }
 
 .recipe-details h2, .print-button {
@@ -136,6 +125,7 @@ header, footer {
     display: flex;
     align-items: flex-start;
     gap: 10px;
+	float: left;
 }
 
 .ingredients label, .instructions label {
@@ -155,57 +145,4 @@ header, footer {
     gap: 10px;
     height: 40px;  
     margin-bottom: 15px;
-}
-
-.stars {
-    display: inline-block;
-    cursor: pointer;
-}
-
-.star {
-    font-size: 30px;
-    color: gray;
-}
-
-.star.gold {
-    color: gold;
-}
-
-.rating-container {
-    text-align: center;
-    margin: 50px;
-}
-
-#rating-summary, #rating-counter {
-    margin-top: 20px;
-}
-
-@media only screen and (min-width: 600px) {
-  .recipe-image {
-    width: 50%;
-    float: left;
-  }
-}
-
-.rating {
-    margin-bottom: 20px;
-}
-
-.star {
-    font-size: 30px;
-    cursor: pointer;
-    color: #ccc;
-    transition: color 0.2s;
-}
-
-.star:hover,
-.star.selected {
-    color: #f39c12;
-}
-
-#average-rating,
-#total-ratings,
-#rating-summary {
-    font-size: 18px;
-    margin-top: 10px;
 }
