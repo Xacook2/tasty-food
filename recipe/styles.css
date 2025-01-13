@@ -58,15 +58,16 @@ header, footer {
 }
 
 .nutritional-info li {
- border: 1px solid black;
- padding: 5px;
  float: left;
- background-color: rgb(193, 225, 193);;
- hight: 60px;
- width: 60px;
+ background-color: rgb(193, 225, 193);
+ hight: 65px;
+ width: 65px;
+ padding: 5px;
 text-align: center;
 margin-left: 5px;
+margin-bottom: 5px;
 border-radius: 5px;
+font-size: 13px;
 }
 .recipe-info li:before {
     display: inline-block;
@@ -146,3 +147,8 @@ border-radius: 5px;
     height: 40px;  
     margin-bottom: 15px;
 }
+
+    <div class="w3-background-color-green">
+	<button onclick="window.print()">Print Recipe</button>
+        <p>Recipe by Xavi Jenkins</p>
+    </div>
